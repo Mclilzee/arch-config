@@ -37,7 +37,7 @@ output * bg ~/Pictures/Wallpapers/cropped-1920-1080-701084.png fill
 #
 # exec swayidle -w \
 #          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -56,6 +56,10 @@ output * bg ~/Pictures/Wallpapers/cropped-1920-1080-701084.png fill
        middle_emulation enabled
        accel_profile "flat"
    }
+
+   input "type:keyboard" {
+      xkb_options caps:escape
+    }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
