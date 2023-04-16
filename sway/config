@@ -23,7 +23,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/Wallpapers/cropped-1920-1080-701084.png fill
+output * bg ~/Pictures/Wallpapers/window-night.png fill
 #
 # Example configuration:
 #
@@ -72,7 +72,7 @@ output * bg ~/Pictures/Wallpapers/cropped-1920-1080-701084.png fill
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
