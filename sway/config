@@ -1,10 +1,9 @@
-font pango:Cantarell Regular 0
+### Custom Settings
+font pango:Cantarell Regular 12
+default_border pixel 5
 hide_edge_borders smart
 gaps inner 5
 smart_gaps on
-exec border csd
-titlebar_border_thickness 0
-titlebar_padding 0
 
 
 # Default config for sway
