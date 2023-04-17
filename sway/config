@@ -24,7 +24,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/.config/Wallpapers/window-night.png fill
-font pango:Fira Code Nerd Regular 12
+font pango:Cantarell Regular 12
 #
 # Example configuration:
 #
