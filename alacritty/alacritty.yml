@@ -1,5 +1,5 @@
 window:
-  startup_mode: Fullscreen
+  # startup_mode: Fullscreen
   opacity: 0.97
 font:
   normal:
