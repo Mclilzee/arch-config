@@ -158,10 +158,10 @@ output * bg ~/.config/Wallpapers/window-night.png fill
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    # bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -185,15 +185,15 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 40px
-    bindsym $down resize grow height 40px
-    bindsym $up resize shrink height 40px
-    bindsym $right resize grow width 40px
+    bindsym $left resize shrink width 60px
+    bindsym $down resize grow height 60px
+    bindsym $up resize shrink height 60px
+    bindsym $right resize grow width 60px
 
-    bindsym $mod+$left resize shrink width 10px
-    bindsym $mod+$down resize grow height 10px
-    bindsym $mod+$up resize shrink height 10px
-    bindsym $mod+$right resize grow width 10px
+    bindsym Shift+$left resize shrink width 10px
+    bindsym Shift+$down resize grow height 10px
+    bindsym Shift+$up resize shrink height 10px
+    bindsym Shift+$right resize grow width 10px
 
 # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
