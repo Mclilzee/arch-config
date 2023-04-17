@@ -3,4 +3,6 @@ window:
   opacity: 0.97
 font:
   normal:
-    family: FiraCode NFM
+    family: FiraCode Nerd Font Mono
+
+style: Regular
