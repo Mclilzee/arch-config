@@ -22,5 +22,5 @@ command=echo "Hello, $USER!"
 interval=once
 
 [time]
-command=date '+%d-%m-%Y %H:%M:%S'
+command=date '+%d-%m-%Y | %H:%M:%S'
 interval=1
