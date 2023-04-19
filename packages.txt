@@ -529,6 +529,8 @@ util-linux
 util-linux-libs
 v4l-utils
 vid.stab
+vim
+vim-runtime
 vlc
 vmaf
 vulkan-icd-loader
