@@ -319,6 +319,7 @@ libxxf86vm
 libyaml
 libzip
 licenses
+light
 lilv
 linux
 linux-api-headers
