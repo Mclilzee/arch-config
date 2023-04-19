@@ -9,7 +9,6 @@ return {
         "flake8",
         "rust-analyzer",
         "rustfmt",
-        "javascript",
       },
     },
   },
