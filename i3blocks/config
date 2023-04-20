@@ -20,8 +20,10 @@ color=#A4C2F4
 command=./bin/battery.sh
 interval=60
 
-[time]
-command=date '+%d-%m-%Y %H:%M:%S'
+[date]
+command=date '+📆   %d-%m-%Y'
 interval=1
 
-
+[time]
+command=date '+🕓   %H:%M:%S'
+interval=1
