@@ -1,5 +1,6 @@
 a52dec
 acl
+acpi
 adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
@@ -125,6 +126,7 @@ hunspell
 hwdata
 hwloc
 i3blocks
+i3status-rust
 iana-etc
 icu
 imath
@@ -521,6 +523,7 @@ tracker3
 tree-sitter
 tslib
 ttf-firacode-nerd
+ttf-font-awesome
 ttf-ubuntu-font-family
 tzdata
 ufw
