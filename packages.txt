@@ -29,6 +29,7 @@ binutils
 bison
 bluez-libs
 botan
+botan2
 brotli
 bzip2
 c-ares
@@ -93,6 +94,7 @@ glib2
 glibc
 glibmm
 glslang
+glu
 gmp
 gnu-free-fonts
 gnupg
@@ -211,6 +213,7 @@ liblc3
 libldac
 libldap
 libluv
+liblzf
 libmad
 libmatroska
 libmfx
@@ -272,6 +275,7 @@ libtheora
 libtiff
 libtirpc
 libtool
+libtpms
 libunistring
 libunwind
 libupnp
@@ -424,6 +428,7 @@ python-pycparser
 python-wheel
 qt5-base
 qt5-svg
+qt5-tools
 qt5-translations
 qt5-x11extras
 rav1e
@@ -481,6 +486,7 @@ ruby-uri
 rubygems
 rustup
 sbc
+sdl12-compat
 sdl2
 seatd
 sed
@@ -535,6 +541,8 @@ v4l-utils
 vid.stab
 vim
 vim-runtime
+virtualbox
+virtualbox-host-modules-arch
 vlc
 vmaf
 vulkan-icd-loader
