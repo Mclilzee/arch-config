@@ -5,8 +5,8 @@ font:
   size: 14
   normal:
     # Linux
-    # family: FiraCode Nerd Font Mono
-    family: MesloLGS NF
+    family: FiraCode Nerd Font Mono
+    # family: MesloLGS NF
 
     # Windows
     # family: FiraCode NFM
