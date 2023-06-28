@@ -14,6 +14,7 @@ arch-wiki-docs
 arch-wiki-lite
 archlinux-keyring
 argon2
+aribb24
 at-spi2-core
 atkmm
 attr
@@ -27,8 +28,8 @@ base-devel
 bash
 binutils
 bison
+blas64-openblas
 bluez-libs
-botan
 botan2
 brotli
 bzip2
@@ -39,12 +40,12 @@ ca-certificates-utils
 cairo
 cairomm
 cantarell-fonts
-cblas64
 composer
 coreutils
 cryptsetup
 curl
 dav1d
+db
 db5.3
 dbus
 dbus-glib
@@ -155,7 +156,6 @@ kmod
 krb5
 l-smash
 lame
-lapack64
 lcms2
 ldns
 less
@@ -280,6 +280,7 @@ libunistring
 libunwind
 libupnp
 libusb
+libutempter
 libutf8proc
 libuv
 libva
@@ -331,8 +332,8 @@ linux
 linux-api-headers
 linux-firmware
 linux-firmware-whence
+lld
 llvm-libs
-llvm14-libs
 lm_sensors
 lua
 lua52
@@ -514,7 +515,6 @@ swaybg
 swayidle
 swayimg
 swaylock
-sysfsutils
 systemd
 systemd-libs
 systemd-sysvcompat
@@ -583,4 +583,5 @@ zeromq
 zimg
 zip
 zlib
+zsh
 zstd
