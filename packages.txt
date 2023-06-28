@@ -22,7 +22,6 @@ audit
 autoconf
 automake
 avahi
-awesome
 base
 base-devel
 bash
@@ -101,7 +100,6 @@ gnu-free-fonts
 gnupg
 gnutls
 go
-gobject-introspection-runtime
 gperftools
 gpgme
 gpm
@@ -129,11 +127,9 @@ hunspell
 hwdata
 hwloc
 i3blocks
-i3status-rust
 iana-etc
 icu
 imath
-imlib2
 iproute2
 iptables
 iputils
@@ -148,7 +144,6 @@ jre-openjdk
 jre-openjdk-headless
 json-c
 json-glib
-jsoncpp
 julia
 kbd
 keyutils
@@ -194,7 +189,6 @@ libffi
 libfontenc
 libfreeaptx
 libgcrypt
-libgirepository
 libgit2
 libglvnd
 libgpg-error
@@ -222,7 +216,6 @@ libmnl
 libmodplug
 libmpc
 libmpcdec
-libmpdclient
 libmpeg2
 libmysofa
 libndp
@@ -294,14 +287,12 @@ libwebp
 libwireplumber
 libx11
 libxau
-libxaw
 libxcb
 libxcomposite
 libxcrypt
 libxcursor
 libxcvt
 libxdamage
-libxdg-basedir
 libxdmcp
 libxext
 libxfixes
@@ -337,8 +328,6 @@ llvm-libs
 lm_sensors
 lua
 lua52
-lua53
-lua53-lgi
 luajit
 luarocks
 lv2
@@ -359,6 +348,7 @@ mpg123
 msgpack-c
 mtdev
 mtools
+ncdu
 ncurses
 neofetch
 neovim
@@ -413,7 +403,6 @@ pipewire-pulse
 pixman
 pkgconf
 polkit
-polybar
 popt
 portaudio
 procps-ng
@@ -506,7 +495,6 @@ spirv-tools
 sqlite
 sratom
 srt
-startup-notification
 sudo
 suitesparse64
 svt-av1
@@ -559,20 +547,17 @@ x264
 x265
 xcb-proto
 xcb-util
-xcb-util-cursor
 xcb-util-errors
 xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
-xcb-util-xrm
 xdg-utils
 xkeyboard-config
 xorg-fonts-encodings
 xorg-server-common
 xorg-setxkbmap
 xorg-xkbcomp
-xorg-xmessage
 xorg-xprop
 xorg-xset
 xorg-xwayland
