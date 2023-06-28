@@ -1,10 +1,12 @@
 window:
   # startup_mode: Fullscreen
-  opacity: 0.97
+  opacity: 0.95
 font:
-  size: 12
+  size: 14
   normal:
     # Linux
-    family: FiraCode Nerd Font Mono
+    # family: FiraCode Nerd Font Mono
+    family: MesloLGS NF
+
     # Windows
     # family: FiraCode NFM

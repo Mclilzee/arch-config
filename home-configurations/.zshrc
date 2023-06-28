@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 source ~/.config/zsh/powerlevel10/powerlevel10k.zsh-theme
+source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
 
 neofetch
 alias ls='ls --color=auto'
