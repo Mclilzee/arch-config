@@ -24,6 +24,7 @@
         "cpu",
         "memory",
         "temperature",
+        "battery",
     ],
     "modules-center": [
         "sway/window"
@@ -32,7 +33,6 @@
         "pulseaudio",
         "network",
         "custom/keyboard-layout",
-        "battery",
         "tray",
         "clock#date",
         "clock#time"
@@ -124,12 +124,12 @@
     "sway/workspaces": {
         "all-outputs": true,
         "disable-scroll": true,
-        "format": "{icon} {name}",
+        "format": "{icon}",
         "format-icons": {
-            "Alacritty": "", // Icon: terminal
-            "2:www": "龜", // Icon: firefox-browser
-            "3:discord": "󰙯", // Icon: discord
-            "4:mail": "", // Icon: mail
+            "1": "", // Icon: terminal
+            "2": "", // Icon: firefox-browser
+            "3": "󰙯", // Icon: discord
+            "4": "", // Icon: mail
             "urgent": "",
             "focused": "",
             "default": ""

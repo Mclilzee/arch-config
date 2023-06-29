@@ -48,27 +48,41 @@
 
 /* The whole bar */
 #waybar {
-    background: #323232;
+    background-color: black;
+    opacity: 0.8;
     color: white;
     font-family: Cantarell, Noto Sans, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 /* Each module */
-#battery,
 #clock,
-#cpu,
 #custom-keyboard-layout,
-#memory,
 #mode,
 #network,
 #pulseaudio,
-#temperature,
-#tray {
-    padding-left: 10px;
-    padding-right: 10px;
+#battery,
+#cpu,
+#memory,
+#temperature {
+  padding: 2px 15px;
 }
 
+
+#battery,
+#cpu,
+#memory,
+#temperature {
+  border-left: solid white 1px;
+}
+
+#clock,
+#custom-keyboard-layout,
+#mode,
+#network,
+#pulseaudio {
+  border-right: solid white 1px;
+}
 
 /* -----------------------------------------------------------------------------
  * Module styles
