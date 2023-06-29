@@ -20,7 +20,10 @@
 
     "modules-left": [
         "sway/workspaces",
-        "sway/mode"
+        "sway/mode",
+        "cpu",
+        "memory",
+        "temperature",
     ],
     "modules-center": [
         "sway/window"
@@ -28,9 +31,6 @@
     "modules-right": [
         "pulseaudio",
         "network",
-        "memory",
-        "cpu",
-        "temperature",
         "custom/keyboard-layout",
         "battery",
         "tray",
@@ -122,11 +122,11 @@
     },
 
     "sway/workspaces": {
-        "all-outputs": false,
+        "all-outputs": true,
         "disable-scroll": true,
         "format": "{icon} {name}",
         "format-icons": {
-            "1:terminals": "", // Icon: terminal
+            "Alacritty": "", // Icon: terminal
             "2:www": "龜", // Icon: firefox-browser
             "3:discord": "󰙯", // Icon: discord
             "4:mail": "", // Icon: mail
@@ -163,9 +163,4 @@
       ],
       "tooltip": false
     },
-
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    }
 }
