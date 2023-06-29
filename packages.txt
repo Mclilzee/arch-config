@@ -349,6 +349,7 @@ mailcap
 make
 man-db
 mbedtls
+mbedtls2
 md4c
 mesa
 mkinitcpio
