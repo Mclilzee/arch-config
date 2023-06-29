@@ -46,6 +46,7 @@
     padding: 0;
     font-size: 16px;
     font-family: monospace;
+    font-weight: bold;
 }
 
 /* The whole bar */
@@ -66,7 +67,6 @@ window#waybar {
 #custom-keyboard-layout,
 #clock {
   padding: 0px 10px;
-  font-weight: bold;
 }
 
 #mode,
@@ -125,9 +125,8 @@ window#waybar {
     font-weight: bold;
 }
 
-#cpu {
-  /* No styles */
-}
+/* #cpu { */
+/* } */
 
 #cpu.warning {
     color: orange;
@@ -160,37 +159,32 @@ window#waybar {
     /* To compensate for the top border and still have vertical centering */
 }
 
-#network {
-    /* No styles */
-}
+/* #network { */
+/* } */
 
 #network.disconnected {
     color: orange;
 }
 
-#pulseaudio {
-    /* No styles */
-}
-
-#pulseaudio.muted {
-    /* No styles */
-}
+/* #pulseaudio { */
+/* } */
+/**/
+/* #pulseaudio.muted { */
+/* } */
 
 #custom-spotify {
     color: rgb(102, 220, 105);
 }
 
-#temperature {
-    /* No styles */
-}
+/* #temperature { */
+/* } */
 
 #temperature.critical {
     color: red;
 }
 
-#tray {
-    /* No styles */
-}
+/* #tray { */
+/* } */
 
 #workspaces button {
     border-top: 2px solid transparent;
