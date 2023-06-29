@@ -27,7 +27,7 @@
         "battery",
     ],
     "modules-center": [
-      "image#archicon",
+        "image#archicon",
     ],
     "modules-right": [
         "pulseaudio",
@@ -36,6 +36,9 @@
         "clock#date",
         "clock#time"
     ],
+
+    // Separators
+
 
 
     // -------------------------------------------------------------------------
@@ -49,10 +52,10 @@
             "critical": 10
         },
         // Connected to AC
-        "format-charging": " {icon}    {capacity}%", // Icon: bolt
-        "format-plugged": "  {capacity}%",
+        "format-charging": " {icon}  {capacity}%", // Icon: bolt
+        "format-full": " {capacity}%",
         // Not connected to AC
-        "format-discharging": "{icon}    {capacity}%",
+        "format-discharging": "{icon}  {capacity}%",
         "format-icons": [
             "", // Icon: battery-full
             "", // Icon: battery-three-quarters
@@ -71,13 +74,13 @@
 
     "clock#date": {
       "interval": 10,
-      "format": "   {:%e %b %Y}", // Icon: calendar-alt
+      "format": "  {:%e %b %Y}", // Icon: calendar-alt
       "tooltip-format": "{:%e %B %Y}"
     },
 
     "cpu": {
         "interval": 5,
-        "format": "    {usage}%", // Icon: microchip
+        "format": "  {usage}%", // Icon: microchip
         "states": {
           "warning": 70,
           "critical": 90
@@ -96,7 +99,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "    {used:0.1f}G / {total:0.1f}G <b>(</b>{}%<b>)</b>", // Icon: memory
+        "format": "  {used:0.1f}G / {total:0.1f}G ({}%)", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
@@ -105,14 +108,14 @@
 
     "network": {
         "interval": 5,
-        "format-wifi": "    {essid} ({signalStrength}%)", // Icon: wifi
+        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
         "format-ethernet": "󰈀  {ifname}", // Icon: ethernet
         "format-disconnected": "󰌙  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}"
     },
 
     "sway/mode": {
-        "format": "     Resize", // Icon: expand-arrows-alt
+        "format": "  Resize", // Icon: expand-arrows-alt
         "tooltip": false
     },
 
@@ -138,7 +141,7 @@
 
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "{icon}   {volume}%",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
@@ -153,7 +156,7 @@
     "temperature": {
       "critical-threshold": 80,
       "interval": 5,
-      "format": "{icon}  {temperatureC}°C",
+      "format": "{icon} {temperatureC}°C",
       "format-icons": [
           "", // Icon: temperature-empty
           "", // Icon: temperature-quarter

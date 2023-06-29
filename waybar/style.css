@@ -44,44 +44,53 @@
     min-height: 0;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    font-family: monospace;
 }
 
 /* The whole bar */
-#waybar {
-    background-color: black;
-    opacity: 0.8;
-    color: white;
-    font-family: sans-serif;
-    font-size: 16px;
+window#waybar {
+  opacity: 0.95;
+	color: #fdf6e3;
+  background-color: black;
 }
 
 /* Each module */
-#clock,
-#custom-keyboard-layout,
 #mode,
-#network,
+#cpu,
+#memory,
+#temperature,
+#battery,
 #pulseaudio,
-#battery,
-#cpu,
-#memory,
-#temperature {
-  padding: 2px 15px;
-}
-
-
-#battery,
-#cpu,
-#memory,
-#temperature {
-  border-left: solid white 1px;
-}
-
-#clock.date,
-#custom-keyboard-layout,
-#mode,
 #network,
-#pulseaudio {
-  border-right: solid white 1px;
+#custom-keyboard-layout,
+#clock {
+  padding: 0px 10px;
+  font-weight: bold;
+}
+
+#mode,
+#cpu,
+#memory,
+#temperature,
+#battery {
+  border-right: solid 3px rgba(0, 200, 255, 0.5);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#pulseaudio,
+#network,
+#custom-keyboard-layout,
+#clock {
+  border-left: solid 3px rgba(0, 200, 255, 0.5);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+}
+
+#image {
+  padding: 2px 50px;
 }
 
 /* -----------------------------------------------------------------------------
