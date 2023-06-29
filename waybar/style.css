@@ -76,7 +76,7 @@
   border-left: solid white 1px;
 }
 
-#clock,
+#clock.date,
 #custom-keyboard-layout,
 #mode,
 #network,
@@ -184,16 +184,15 @@
 }
 
 #window {
-    font-weight: bold;
+  background-image: url("./icons/archicon.png")
 }
 
 #workspaces button {
     border-top: 2px solid transparent;
     /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 2px 30px;
     color: #888888;
+    border-radius: 0px 10px 0px 0px;
 }
 
 #workspaces button.focused {

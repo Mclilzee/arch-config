@@ -33,7 +33,6 @@
         "pulseaudio",
         "network",
         "custom/keyboard-layout",
-        "tray",
         "clock#date",
         "clock#time"
     ],
@@ -122,7 +121,7 @@
     },
 
     "sway/workspaces": {
-        "all-outputs": true,
+        "all-outputs": false,
         "disable-scroll": true,
         "format": "{icon}",
         "format-icons": {
