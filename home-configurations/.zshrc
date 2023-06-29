@@ -20,10 +20,11 @@ ZSH_AUTOSUGGEST_STRATEGY=completion
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias lock="swaylock -f -c 000000"
-alias savepk="pacman -Qq > ~/.config/packages.txt"
+alias savepk="pacman -Qttenq > ~/.config/packages.txt"
 alias cp="cp -v"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
