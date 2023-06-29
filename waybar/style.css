@@ -51,8 +51,8 @@
     background-color: black;
     opacity: 0.8;
     color: white;
-    font-family: Cantarell, Noto Sans, sans-serif;
-    font-size: 14px;
+    font-family: FiraCode, Noto Sans, sans-serif;
+    font-size: 16px;
 }
 
 /* Each module */
@@ -181,10 +181,6 @@
 
 #tray {
     /* No styles */
-}
-
-#arch.icon {
-  background-image: url("./icons/archicon.png");
 }
 
 #workspaces button {

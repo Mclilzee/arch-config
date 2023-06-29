@@ -16,7 +16,7 @@
     "position": "bottom",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 20,
+    "height": 26,
 
     "modules-left": [
         "sway/workspaces",
@@ -27,7 +27,7 @@
         "battery",
     ],
     "modules-center": [
-        "arch/icon"
+      "image#archicon",
     ],
     "modules-right": [
         "pulseaudio",
@@ -96,7 +96,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "    {}%", // Icon: memory
+        "format": "    {used:0.1f}G / {total:0.1f}G", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
@@ -116,13 +116,9 @@
         "tooltip": false
     },
 
-    // "sway/window": {
-    //     "format": "{}",
-    //     "max-length": 120
-    // },
-
-    "arch/icon": {
-        "format": "<span></span>",
+    "image#archicon": {
+      "path": "/home/mclilzee/.config/waybar/icons/archicon.png",
+      "size": 30,
     },
 
     "sway/workspaces": {
