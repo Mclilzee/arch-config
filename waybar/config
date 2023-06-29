@@ -27,7 +27,7 @@
         "battery",
     ],
     "modules-center": [
-        "sway/window"
+        "arch/icon"
     ],
     "modules-right": [
         "pulseaudio",
@@ -105,19 +105,23 @@
     "network": {
         "interval": 5,
         "format-wifi": "    {essid} ({signalStrength}%)", // Icon: wifi
-        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
-        "format-disconnected": "⚠  Disconnected",
+        "format-ethernet": "󰈀  {ifname}", // Icon: ethernet
+        "format-disconnected": "󰌙  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}"
     },
 
     "sway/mode": {
-        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+        "format": "     Resize", // Icon: expand-arrows-alt
         "tooltip": false
     },
 
-    "sway/window": {
-        "format": "{}",
-        "max-length": 120
+    // "sway/window": {
+    //     "format": "{}",
+    //     "max-length": 120
+    // },
+
+    "arch/icon": {
+        "format": "<span></span>",
     },
 
     "sway/workspaces": {
