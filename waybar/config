@@ -49,7 +49,8 @@
             "critical": 10
         },
         // Connected to AC
-        "format": " {icon}    {capacity}%", // Icon: bolt
+        "format-charging": " {icon}    {capacity}%", // Icon: bolt
+        "format-plugged": "  {capacity}%",
         // Not connected to AC
         "format-discharging": "{icon}    {capacity}%",
         "format-icons": [
@@ -76,7 +77,7 @@
 
     "cpu": {
         "interval": 5,
-        "format": "  {usage}% ({load})", // Icon: microchip
+        "format": "    {usage}%", // Icon: microchip
         "states": {
           "warning": 70,
           "critical": 90
@@ -95,7 +96,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "  {}%", // Icon: memory
+        "format": "    {}%", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
