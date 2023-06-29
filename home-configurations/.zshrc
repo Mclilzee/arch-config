@@ -15,6 +15,8 @@ compinit
 setopt correct
 setopt correctall
 
+ZSH_AUTOSUGGEST_STRATEGY=completion
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias lock="swaylock -f -c 000000"
