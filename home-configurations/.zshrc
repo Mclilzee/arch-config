@@ -14,7 +14,6 @@ compinit
 
 setopt correct
 setopt correctall
-set -o vi
 
 ZSH_AUTOSUGGEST_STRATEGY=completion
 
