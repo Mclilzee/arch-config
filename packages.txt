@@ -1,6 +1,5 @@
 a52dec
 acl
-acpi
 adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
@@ -39,6 +38,7 @@ ca-certificates-utils
 cairo
 cairomm
 cantarell-fonts
+chrono-date
 composer
 coreutils
 cryptsetup
@@ -77,6 +77,7 @@ firefox
 fish
 flac
 flex
+fmt
 fontconfig
 freetype2
 fribidi
@@ -110,6 +111,7 @@ groff
 grub
 gsettings-desktop-schemas
 gsm
+gtk-layer-shell
 gtk-update-icon-cache
 gtk2
 gtk3
@@ -126,7 +128,6 @@ http-parser
 hunspell
 hwdata
 hwloc
-i3blocks
 iana-etc
 icu
 imath
@@ -144,6 +145,7 @@ jre-openjdk
 jre-openjdk-headless
 json-c
 json-glib
+jsoncpp
 julia
 kbd
 keyutils
@@ -154,6 +156,7 @@ lame
 lcms2
 ldns
 less
+libappindicator-gtk3
 libarchive
 libass
 libassuan
@@ -163,6 +166,7 @@ libblastrampoline
 libbluray
 libbpf
 libbs2b
+libbsd
 libcamera
 libcamera-ipa
 libcanberra
@@ -173,6 +177,8 @@ libcolord
 libcups
 libdaemon
 libdatrie
+libdbusmenu-glib
+libdbusmenu-gtk3
 libdca
 libde265
 libdrm
@@ -198,6 +204,7 @@ libice
 libidn
 libidn2
 libiec61883
+libimobiledevice
 libinput
 libisl
 libjpeg-turbo
@@ -210,12 +217,14 @@ libluv
 liblzf
 libmad
 libmatroska
+libmd
 libmfx
 libmm-glib
 libmnl
 libmodplug
 libmpc
 libmpcdec
+libmpdclient
 libmpeg2
 libmysofa
 libndp
@@ -239,6 +248,7 @@ libpgm
 libpipeline
 libpipewire
 libplacebo
+libplist
 libpng
 libproxy
 libpsl
@@ -273,6 +283,7 @@ libunistring
 libunwind
 libupnp
 libusb
+libusbmuxd
 libutempter
 libutf8proc
 libuv
@@ -402,6 +413,7 @@ pipewire-audio
 pipewire-pulse
 pixman
 pkgconf
+playerctl
 polkit
 popt
 portaudio
@@ -425,6 +437,7 @@ rav1e
 readline
 ripgrep
 ripgrep-all
+rmlint
 ruby
 ruby-abbrev
 ruby-base64
@@ -487,8 +500,10 @@ shadow
 shared-mime-info
 slang
 slurp
+sndio
 sord
 sound-theme-freedesktop
+spdlog
 speex
 speexdsp
 spirv-tools
@@ -523,6 +538,8 @@ tzdata
 ufw
 unibilium
 unzip
+upower
+usbmuxd
 usbutils
 util-linux
 util-linux-libs
@@ -535,6 +552,7 @@ virtualbox-host-modules-arch
 vlc
 vmaf
 vulkan-icd-loader
+waybar
 wayland
 webrtc-audio-processing
 wget

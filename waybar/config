@@ -96,7 +96,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "    {used:0.1f}G / {total:0.1f}G", // Icon: memory
+        "format": "    {used:0.1f}G / {total:0.1f}G <b>(</b>{}%<b>)</b>", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
