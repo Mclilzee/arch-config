@@ -1,6 +1,9 @@
 window:
   # startup_mode: Fullscreen
   opacity: 0.95
+colors:
+  primary:
+    background: '#090909'
 font:
   size: 14
   normal:
