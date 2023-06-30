@@ -3,10 +3,12 @@ arch-wiki-docs
 arch-wiki-lite
 base
 base-devel
+composer
 discord
 dmenu
 dosfstools
 efibootmgr
+fd
 firefox
 fish
 git
@@ -30,7 +32,6 @@ npm
 os-prober
 pacman-contrib
 pavucontrol
-php
 pipewire-alsa
 pipewire-pulse
 python-pip
