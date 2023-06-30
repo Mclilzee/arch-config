@@ -2,7 +2,7 @@ window:
   # startup_mode: Fullscreen
   opacity: 0.95
 font:
-  size: 16
+  size: 14
   normal:
     # Linux
     family: FiraCodeNerdFont
