@@ -16,9 +16,13 @@ return {
     },
   },
 
-  { "catppuccin/nvim", name = "catppuccin", opts = {
-    transparent_background = true,
-  } },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {
+      transparent_background = true,
+    },
+  },
 
   {
     "LazyVim/LazyVim",
