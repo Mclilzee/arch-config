@@ -12,11 +12,10 @@
     // -------------------------------------------------------------------------
 
     "layer": "bottom",
-
     "position": "bottom",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 26,
+    "height": 30,
 
     "modules-left": [
         "sway/workspaces",
