@@ -50,10 +50,8 @@
             "warning": 20,
             "critical": 10
         },
-        // Connected to AC
         "format-charging": " {icon}  {capacity}%", // Icon: bolt
         "format-full": " {capacity}%",
-        // Not connected to AC
         "format-discharging": "{icon}  {capacity}%",
         "format-icons": [
             "", // Icon: battery-full
