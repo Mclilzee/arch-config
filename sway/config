@@ -6,14 +6,9 @@ gaps inner 5
 smart_gaps on
 
 
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
-#
 # Logo key. Use Mod1 for Alt, Mod4 for Super.
 set $mod Mod1
 # Home row direction keys, like vim
@@ -197,15 +192,15 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 60px
+    bindsym $right resize shrink width 60px
     bindsym $down resize grow height 60px
     bindsym $up resize shrink height 60px
-    bindsym $right resize grow width 60px
+    bindsym $left resize grow width 60px
 
-    bindsym Shift+$left resize shrink width 10px
+    bindsym Shift+$right resize shrink width 10px
     bindsym Shift+$down resize grow height 10px
     bindsym Shift+$up resize shrink height 10px
-    bindsym Shift+$right resize grow width 10px
+    bindsym Shift+$left resize grow width 10px
 
 # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
