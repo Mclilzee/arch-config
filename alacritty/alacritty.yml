@@ -4,6 +4,10 @@ window:
 colors:
   primary:
     background: '#090909'
+
+cursor:
+  style:
+    blinking: On
 font:
   size: 14
   normal:
