@@ -28,6 +28,8 @@ ncdu
 neofetch
 neovim
 networkmanager
+noto-fonts-cjk
+noto-fonts-emoji
 npm
 os-prober
 pacman-contrib
