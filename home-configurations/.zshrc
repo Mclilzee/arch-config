@@ -1,7 +1,9 @@
-neofetch
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+
+neofetch
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -14,8 +16,6 @@ compinit
 
 setopt correct
 setopt correctall
-
-ZSH_AUTOSUGGEST_STRATEGY=completion
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
