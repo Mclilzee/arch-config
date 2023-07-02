@@ -7,8 +7,6 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
-        "rust-analyzer",
-        "rustfmt",
         "google-java-format",
         "jsonlint",
         "lua-language-server",
