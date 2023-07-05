@@ -12,7 +12,10 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 setopt correct
 setopt correctall
@@ -22,6 +25,17 @@ alias grep='grep --color=auto'
 alias lock="swaylock -f -c 000000"
 alias savepk="pacman -Qttenq > ~/.config/packages.txt"
 alias cp="cp -v"
+
+autoload -U colors && colors
+
+# History in cache directory:
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.cache/zsh/history
+
+# Edit line in vim with ctrl-k:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^k' edit-command-line
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
