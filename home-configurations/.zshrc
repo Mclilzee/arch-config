@@ -27,7 +27,8 @@ alias savepk="pacman -Qttenq > ~/.config/packages.txt"
 alias cp="cp -v"
 
 # WSL Only
-# alias rootfind="sudo find /bin /boot /dev /etc /home /init /lib /lib64 /lost+found /opt /proc /root /run /sbin /srv /sys /tmp /usr /var"
+# alias wslfind="sudo find /bin /boot /dev /etc /home /init /lib /lib64 /lost+found /opt /proc /root /run /sbin /srv /sys /tmp /usr /var"
+# alias rootfind="sudo find / -xdev"
 # if [[ $PWD == "/mnt/c/Arch" ]]; then
 #   cd
 # fi
