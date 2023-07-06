@@ -17,21 +17,14 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-setopt correct
-setopt correctall
+# setopt correct
+# setopt correctall
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias lock="swaylock -f -c 000000"
 alias savepk="pacman -Qttenq > ~/.config/packages.txt"
 alias cp="cp -v"
-
-# WSL Only
-# alias wslfind="sudo find /bin /boot /dev /etc /home /init /lib /lib64 /lost+found /opt /proc /root /run /sbin /srv /sys /tmp /usr /var"
-# alias rootfind="sudo find / -xdev"
-# if [[ $PWD == "/mnt/c/Arch" ]]; then
-#   cd
-# fi
 
 autoload -U colors && colors
 
@@ -42,9 +35,17 @@ HISTFILE=~/.cache/zsh/history
 
 # Edit line in vim with ctrl-k:
 autoload edit-command-line; zle -N edit-command-line
+export EDITOR=nvim
 bindkey '^k' edit-command-line
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# WSL Only
+# alias wslfind="sudo find /bin /boot /dev /etc /home /init /lib /lib64 /lost+found /opt /proc /root /run /sbin /srv /sys /tmp /usr /var"
+# alias rootfind="sudo find / -xdev"
+# if [[ $PWD == "/mnt/c/Arch" ]]; then
+#   cd
+# fi
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
