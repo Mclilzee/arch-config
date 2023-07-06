@@ -35,7 +35,7 @@ HISTFILE=~/.cache/zsh/history
 
 # Edit line in vim with ctrl-k:
 autoload edit-command-line; zle -N edit-command-line
-export EDITOR=nvim
+export EDITOR=vim
 bindkey '^k' edit-command-line
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
