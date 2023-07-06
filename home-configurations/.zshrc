@@ -44,7 +44,7 @@ bindkey '^k' edit-command-line
 # WSL Only
 # alias wslfind="sudo find /bin /boot /dev /etc /home /init /lib /lib64 /lost+found /opt /proc /root /run /sbin /srv /sys /tmp /usr /var"
 # alias rootfind="sudo find / -xdev"
-# if [[ $PWD == "/mnt/c/Arch" ]]; then
+# if [[ $PWD == "/mnt/c/Windows/System32" ]]; then
 #   cd
 # fi
 
