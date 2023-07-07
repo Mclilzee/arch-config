@@ -44,7 +44,6 @@ alias cp="cp -v"
 # if [[ $PWD == "/mnt/c/Windows/System32" ]]; then
 #   cd
 # fi
-# export PATH="$PATH:$HOME/.rbenv/versions/3.2.2/bin"
 
 autoload -U colors && colors
 
