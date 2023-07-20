@@ -18,6 +18,7 @@ return {
         "jsonlint",
         "prettier",
         "js-debug-adapter",
+        "eslint-lsp",
         "typescript-language-server",
         -- added through lsconfig manually:
         -- "rust-analyzer"
