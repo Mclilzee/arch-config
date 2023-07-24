@@ -126,9 +126,6 @@ window#waybar {
     font-weight: bold;
 }
 
-/* #cpu { */
-/* } */
-
 #cpu.warning {
     color: orange;
 }

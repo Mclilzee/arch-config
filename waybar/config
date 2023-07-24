@@ -131,7 +131,7 @@
             "2": "", // Icon: firefox-browser
             "3": "󰙯", // Icon: discord
             "4": "", // Icon: mail
-            "urgent": "",
+//            "urgent": "{icon}",
 //            "focused": "",
             "default": ""
         }
