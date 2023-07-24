@@ -23,6 +23,7 @@ bindkey '^[[Z' complete-word  # shift + tab
 
 
 # Global settings
+bindkey -e # Set mode to emac
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
