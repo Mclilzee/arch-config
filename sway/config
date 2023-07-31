@@ -26,6 +26,14 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Custom Keymaps
 bindsym $mod+Shift+p exec grim -g "$(slurp -d)" - | wl-copy
 bindsym $mod+p exec grim - | wl-copy
+
+bindsym XF86AudioRaiseVolume exec pamixer -i "5"
+bindsym XF86AudioLowerVolume exec pamixer -d "5"
+bindsym XF86AudioMute exec pamixer -t
+
+bindsym XF86MonBrightnessUp exec light -A "10"
+bindsym XF86MonBrightnessDown exec light -U "10"
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
