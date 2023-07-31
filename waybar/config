@@ -70,7 +70,7 @@
     "clock#date": {
       "interval": 10,
       "format": "  {:%e %b %Y}", // Icon: calendar-alt
-      "tooltip-format": "{:%e %B %Y}"
+      "tooltip-format": "{:%A %e %B %Y}"
     },
 
     "cpu": {
@@ -141,7 +141,7 @@
         "scroll-step": 1,
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "",
+        "format-muted": "󰖁",
         "format-icons": {
             "headphones": "",
             "car": "",
