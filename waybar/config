@@ -62,16 +62,31 @@
     },
 
     "clock#time": {
-        "interval": 1,
-        "format": "{:%H:%M:%S}",
+        "interval": 10,
+        "format": " {:%H:%M}", // %S to show seconds, currently not working propelry
         "tooltip": false
     },
 
     "clock#date": {
-      "interval": 10,
-      "format": "  {:%e %b %Y}", // Icon: calendar-alt
-      "tooltip-format": "{:%A %e %B %Y}"
-    },
+      "format": "  {:%e %b %Y} ",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+                  "mode"          : "month",
+                  "mode-mon-col"  : 3,
+                  "weeks-pos"     : "right",
+                  "on-scroll"     : 1,
+                  "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                  },
+      "actions":  {
+                  "on-click": "mode",
+                  }
+  },
 
     "cpu": {
         "interval": 5,
