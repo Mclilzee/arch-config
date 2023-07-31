@@ -33,6 +33,7 @@ noto-fonts-emoji
 npm
 os-prober
 pacman-contrib
+pamixer
 pavucontrol
 pipewire-alsa
 pipewire-pulse
