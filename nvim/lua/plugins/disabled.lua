@@ -1,8 +1,7 @@
 return {
   {
-    "kdheepak/lazygit.nvim",
+    "jesseduffield/lazygit",
     enabled = false,
-    keys = {},
   },
 
   {

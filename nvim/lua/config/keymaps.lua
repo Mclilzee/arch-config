@@ -18,3 +18,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- Center Screen after searching
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+-- Disabled Plugins
+vim.keymap.del("n", "<leader>gg")
+vim.keymap.del("n", "<leader>gG")
