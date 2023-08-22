@@ -12,6 +12,10 @@ return {
   {
     "folke/flash.nvim",
     enabled = false,
-    keys = {},
+  },
+
+  {
+    "catppuccin/nvim",
+    enabled = false,
   },
 }
