@@ -10,4 +10,7 @@ vim.o.breakindent = true
 vim.o.hlsearch = false
 vim.o.cursorline = false
 
+-- Number of entries in a popup
+vim.o.pumheight = 0
+
 -- opt.wildmode = "longest:full,full" -- Command-line completion mode
