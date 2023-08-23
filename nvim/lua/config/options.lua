@@ -5,6 +5,9 @@
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Block cursor
+vim.o.guicursor = "i:block"
+
 -- Overwrite defaults
 -- Highlighting
 vim.o.hlsearch = false
