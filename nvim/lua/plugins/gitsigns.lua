@@ -1,3 +1,4 @@
+-- This config to change hotkeys
 return {
   "lewis6991/gitsigns.nvim",
   event = { "BufReadPre", "BufNewFile" },
