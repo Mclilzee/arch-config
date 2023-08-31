@@ -12,8 +12,6 @@ vim.o.guicursor = "i:block"
 -- Highlighting
 vim.o.hlsearch = false
 vim.o.cursorline = false
-
--- Conceal
 vim.o.conceallevel = 0
 
 -- Number of entries in a popup
