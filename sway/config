@@ -36,7 +36,7 @@ bindsym XF86MonBrightnessDown exec light -U "10"
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+# Path to background image
 output * bg ~/.config/wallpapers/window-night.png fill
 #
 # Example configuration:
