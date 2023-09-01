@@ -2,75 +2,158 @@ return {
   -- Lazy git
   {
     "jesseduffield/lazygit",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
-  -- Colorschemes
-  -- {
-  --   "catppuccin/nvim",
-  --   enabled = false,
-  -- },
+  {
+    "catppuccin/nvim",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
 
   {
     "folke/tokyonight.nvim",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
   -- S movements
   {
     "folke/flash.nvim",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
   {
     "echasnovski/mini.surround",
-    enabled = false,
     keys = function()
       return {}
     end,
+    enabled = false,
   },
 
   {
     "echasnovski/mini.ai",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
   {
     "echasnovski/mini.pairs",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    enabled = false,
-  },
+  -- {
+  --   "lukas-reineke/indent-blankline.nvim",
+  keys = function()
+    return {}
+  end,
+  --   enabled = false,
+  -- },
 
   -- Show input bubble
   {
     "noice.nvim",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
   -- Not sure supposed to show nice boxes
   {
     "stevearc/dressing.nvim",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
   {
     "folke/edgy.nvim",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
   -- Show function scope
   {
     "echasnovski/mini.indentscope",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 
   -- Show bubble messages
   {
     "rcarriga/nvim-notify",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
+
+  {
+    "echasnovski/mini.bufremove",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
+
+  {
+    "akinsho/bufferline.nvim",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
+
+  {
+    "goolord/alpha-nvim",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
+
+  {
+    "dstein64/vim-startuptime",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
+
+  {
+    "folke/persistence.nvim",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
+
+  {
+    "nvim-pack/nvim-spectre",
+    keys = function()
+      return {}
+    end,
     enabled = false,
   },
 }

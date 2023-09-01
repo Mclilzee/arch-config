@@ -17,4 +17,7 @@ vim.o.conceallevel = 0
 -- Number of entries in a popup
 vim.o.pumheight = 0
 
+-- Scrolloff
+vim.o.scrolloff = 20
+
 -- opt.wildmode = "longest:full,full" -- Command-line completion mode
