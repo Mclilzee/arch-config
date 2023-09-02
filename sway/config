@@ -37,7 +37,7 @@ bindsym XF86MonBrightnessDown exec light -U "10"
 ### Output configuration
 #
 # Path to background image
-output * bg ~/.config/wallpapers/window-night.png fill
+output * bg ~/wallpapers/window-night.png fill
 #
 # Example configuration:
 #

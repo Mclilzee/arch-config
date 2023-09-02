@@ -3,7 +3,7 @@ window:
   opacity: 0.85
 colors:
   cursor:
-custom_colors: true
+    custom_colors: true
     cursor: '0xffffff'
   primary:
     background: '#050505'
