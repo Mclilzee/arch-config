@@ -63,3 +63,4 @@ zsh-completions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 ansible
+fzf
