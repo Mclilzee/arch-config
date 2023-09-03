@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-languages=$(echo "golang c cpp typescript rust" | tr " " "\n")
+languages=$(echo "postgresql golang c cpp typescript rust" | tr " " "\n")
 # core_utils=$(echo "find xargs sed fd awk" | tr " " "\n")
 # selected=$(echo -e "$languages\n$core_utils" | fzf)
 selected=$(echo -e "$languages" | fzf)
