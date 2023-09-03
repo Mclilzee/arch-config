@@ -10,13 +10,12 @@ return {
         -- git
         { "<leader>gc", Util.telescope("git_commits"), desc = "commits" },
         { "<leader>gs", Util.telescope("git_status"), desc = "status" },
-        { "<leader>gf", Util.telescope("git_files"), desc = "files" },
         { "<leader>gb", Util.telescope("git_branches"), desc = "branch" },
         -- search
         { "<leader><space>", Util.telescope("buffers"), desc = "Display Buffers" },
         { "<leader>sg", Util.telescope("live_grep"), desc = "Live Grep" },
-        { "<leader>sf", Util.telescope("files"), desc = "Files" },
         { "<leader>sr", "<cmd>Telescope oldfiles<CR>", desc = "Recent" },
+        { "<leader>sf", Util.telescope("files"), desc = "Files" },
         { "<leader>sa", Util.telescope("autocommands"), desc = "Auto Commands" },
         { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find" },
         { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
