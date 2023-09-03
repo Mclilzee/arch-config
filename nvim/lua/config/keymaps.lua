@@ -21,3 +21,5 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Disabled Plugins
 vim.keymap.del("n", "<leader>gg")
 vim.keymap.del("n", "<leader>gG")
+
+vim.keymap.set("n", "<leader>?", ":silent !cht.sh<CR>", { desc = "Search cht cheats" })

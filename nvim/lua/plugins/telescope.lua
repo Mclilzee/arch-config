@@ -14,7 +14,7 @@ return {
         { "<leader><space>", Util.telescope("buffers"), desc = "Display Buffers" },
         { "<leader>sg", Util.telescope("live_grep"), desc = "[S]earch by [G]rep" },
         { "<leader>sf", Util.telescope("files"), desc = "[S]earch [F]iles" },
-        { "<leader>?", Util.telescope("oldfiles"), desc = "Recent" },
+        { "<leader>sr", Util.telescope("oldfiles"), desc = "[S]earch [R]ecent" },
         { "<leader>sa", Util.telescope("autocommands"), desc = "[S]earch [A]uto Commands" },
         { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find" },
         { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
@@ -25,8 +25,7 @@ return {
         { "<leader>sM", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
         { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Jump to Mark" },
         { "<leader>so", "<cmd>Telescope vim_options<cr>", desc = "Options" },
-        { "<leader>sr", Util.telescope("registers"), desc = "Register" },
-        { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
+        { "<leader>sR", Util.telescope("registers"), desc = "Register" },
         {
           "<leader>ss",
           Util.telescope("lsp_document_symbols", {
