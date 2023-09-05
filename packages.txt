@@ -68,3 +68,4 @@ tmux
 lsd
 bat
 procs
+tldr
