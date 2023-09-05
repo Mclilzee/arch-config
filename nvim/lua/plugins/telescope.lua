@@ -8,23 +8,24 @@ return {
     keys = function()
       return {
         -- git
-        { "<leader>gc", Util.telescope("git_commits"), desc = "commits" },
-        { "<leader>gs", Util.telescope("git_status"), desc = "status" },
-        { "<leader>gb", Util.telescope("git_branches"), desc = "branch" },
+        { "<leader>gc", Util.telescope("git_commits"), desc = "Commits" },
+        { "<leader>gs", Util.telescope("git_status"), desc = "Status" },
+        { "<leader>gB", Util.telescope("git_branches"), desc = "Branches" },
         -- search
         { "<leader><space>", Util.telescope("buffers"), desc = "Display Buffers" },
         { "<leader>sg", Util.telescope("live_grep"), desc = "Live Grep" },
         { "<leader>sr", "<cmd>Telescope oldfiles<CR>", desc = "Recent" },
         { "<leader>sf", Util.telescope("files"), desc = "Files" },
         { "<leader>sa", Util.telescope("autocommands"), desc = "Auto Commands" },
+        { "<leader>sC", Util.telescope("commands"), desc = "Auto Commands" },
         { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find" },
         { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
         { "<leader>sD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
         { "<leader>sh", Util.telescope("help_tags"), desc = "Help Pages" },
-        { "<leader>sH", "<cmd>Telescope highlights<cr>", desc = "Search Highlight Groups" },
+        { "<leader>sH", "<cmd>Telescope highlights<cr>", desc = "Highlight Groups" },
         { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
         { "<leader>sM", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
-        { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Jump to Mark" },
+        { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Mark" },
         { "<leader>so", "<cmd>Telescope vim_options<cr>", desc = "Options" },
         { "<leader>sR", Util.telescope("registers"), desc = "Register" },
         {
@@ -43,7 +44,7 @@ return {
               "Property",
             },
           }),
-          desc = "Goto Symbol",
+          desc = "Symbol",
         },
         {
           "<leader>sS",
@@ -61,7 +62,7 @@ return {
               "Property",
             },
           }),
-          desc = "Goto Symbol (Workspace)",
+          desc = "Symbol (Workspace)",
         },
       }
     end,
@@ -71,6 +72,15 @@ return {
         selection_caret = " ",
         mappings = {
           i = {
+            ["<esc>"] = function(...)
+              return require("telescope.actions").close(...)
+            end,
+            ["<C-s>"] = function(...)
+              return require("telescope.actions").cycle_previewers_next(...)
+            end,
+            ["<C-a>"] = function(...)
+              return require("telescope.actions").cycle_previewers_prev(...)
+            end,
             ["<c-t>"] = function(...)
               return require("trouble.providers.telescope").open_with_trouble(...)
             end,
@@ -92,17 +102,6 @@ return {
             end,
             ["<C-Up>"] = function(...)
               return require("telescope.actions").cycle_history_prev(...)
-            end,
-            ["<C-f>"] = function(...)
-              return require("telescope.actions").preview_scrolling_down(...)
-            end,
-            ["<C-b>"] = function(...)
-              return require("telescope.actions").preview_scrolling_up(...)
-            end,
-          },
-          n = {
-            ["q"] = function(...)
-              return require("telescope.actions").close(...)
             end,
           },
         },
