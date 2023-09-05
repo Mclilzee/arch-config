@@ -65,3 +65,4 @@ zsh-theme-powerlevel10k
 ansible
 fzf
 tmux
+lsd
