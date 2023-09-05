@@ -33,13 +33,15 @@ _comp_options+=(globdots)		# Include hidden files.
 # setopt correct
 # setopt correctall
 
-alias grep='grep --color=auto'
 alias lock="swaylock -f -c 000000"
 alias savepk="pacman -Qttenq > ~/.config/packages.txt"
 alias cp="cp -v"
 alias cdf='cd $(fd -H -t d | fzf)'
 alias fd="fd -H"
 alias ls="lsd"
+alias cat="bat"
+alias grep="rg"
+alias ps="procs"
 
 # WSL Only
 # alias wslfind="sudo find /bin /boot /dev /etc /home /init /lib /lib64 /lost+found /opt /proc /root /run /sbin /srv /sys /tmp /usr /var"
