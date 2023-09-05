@@ -18,6 +18,29 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Disabled Plugins
+-- Go to other buffer
+vim.keymap.set("n", "<leader>,", "<cmd>e #<CR>", { desc = "Previous Buffer" })
+
+-- LSP
+vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = "Restart" })
+vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<CR>", { desc = "Info" })
+vim.keymap.set("n", "<leader>ls", "<cmd>LspStart<CR>", { desc = "Start" })
+vim.keymap.set("n", "<leader>ll", "<cmd>LspLog<CR>", { desc = "Log" })
+vim.keymap.set("n", "<leader>lS", "<cmd>LspStop<CR>", { desc = "Stop" })
+vim.keymap.set("n", "<leader>lI", "<cmd>LspInstall<CR>", { desc = "Install" })
+vim.keymap.set("n", "<leader>lu", "<cmd>LspUninstall<CR>", { desc = "Uninstall" })
+
+-- Deleted Keys
 vim.keymap.del("n", "<leader>gg")
+vim.keymap.del("n", "<leader>`")
 vim.keymap.del("n", "<leader>gG")
+vim.keymap.del("n", "<leader>bb")
+vim.keymap.del("n", "<leader>l")
+vim.keymap.del("n", "<leader>qq")
+vim.keymap.del("n", "<leader>L")
+vim.keymap.del("n", "<leader><tab>l")
+vim.keymap.del("n", "<leader><tab>f")
+vim.keymap.del("n", "<leader><tab><tab>")
+vim.keymap.del("n", "<leader><tab>]")
+vim.keymap.del("n", "<leader><tab>d")
+vim.keymap.del("n", "<leader><tab>[")

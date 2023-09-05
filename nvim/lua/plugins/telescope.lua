@@ -13,6 +13,7 @@ return {
         { "<leader>gB", Util.telescope("git_branches"), desc = "Branches" },
         -- search
         { "<leader><space>", Util.telescope("buffers"), desc = "Display Buffers" },
+
         { "<leader>sg", Util.telescope("live_grep"), desc = "Live Grep" },
         { "<leader>sr", "<cmd>Telescope oldfiles<CR>", desc = "Recent" },
         { "<leader>sf", Util.telescope("files"), desc = "Files" },
@@ -106,6 +107,17 @@ return {
           },
         },
       },
+    },
+  },
+
+  {
+    "telescope.nvim",
+    dependencies = {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+      config = function()
+        require("telescope").load_extension("fzf")
+      end,
     },
   },
 }

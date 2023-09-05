@@ -10,6 +10,7 @@ return {
 
   {
     "catppuccin/nvim",
+    name = "catppuccin",
     keys = function()
       return {}
     end,
@@ -59,9 +60,9 @@ return {
 
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
-  keys = function()
-    return {}
-  end,
+  -- keys = function()
+  --   return {}
+  -- end,
   --   enabled = false,
   -- },
 
