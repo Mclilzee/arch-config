@@ -1,5 +1,16 @@
 [core]
+  pager = delta
 	editor = nvim
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  light = false
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
 [user]
 	email = 70924991+Mclilzee@users.noreply.github.com
 	name = mclilzee

@@ -70,3 +70,4 @@ bat
 procs
 tldr
 gtop
+git-delta
