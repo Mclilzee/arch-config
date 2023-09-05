@@ -66,3 +66,5 @@ ansible
 fzf
 tmux
 lsd
+bat
+procs
