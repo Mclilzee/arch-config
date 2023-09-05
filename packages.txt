@@ -69,3 +69,4 @@ lsd
 bat
 procs
 tldr
+gtop
