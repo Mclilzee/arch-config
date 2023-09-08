@@ -18,6 +18,6 @@ vim.o.conceallevel = 0
 vim.o.pumheight = 0
 
 -- Scrolloff
-vim.o.scrolloff = 20
+vim.o.scrolloff = 8
 
 -- opt.wildmode = "longest:full,full" -- Command-line completion mode
