@@ -14,14 +14,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-# zsh-autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_STRATEGY=(completion history)
-bindkey '^I' autosuggest-accept # tab
-bindkey '^[[Z' complete-word  # shift + tab
-
-
 # Global settings
 bindkey -e # Set mode to emac
 autoload -Uz compinit
@@ -29,9 +21,14 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
-
 # setopt correct
 # setopt correctall
+
+# zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(completion history)
+bindkey '\t' autosuggest-accept
+bindkey '^[[Z' complete-word
 
 alias lock="swaylock -f -c 000000"
 alias savepk="pacman -Qttenq > ~/.config/packages.txt"
