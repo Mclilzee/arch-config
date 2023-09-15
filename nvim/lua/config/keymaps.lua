@@ -31,6 +31,12 @@ vim.keymap.set("n", "<leader>lI", "<cmd>LspInstall<CR>", { desc = "Install" })
 vim.keymap.set("n", "<leader>lu", "<cmd>LspUninstall<CR>", { desc = "Uninstall" })
 
 -- Deleted Keys
+vim.keymap.del("n", "<A-j>")
+vim.keymap.del("n", "<A-k>")
+vim.keymap.del("i", "<A-j>")
+vim.keymap.del("i", "<A-k>")
+vim.keymap.del("v", "<A-j>")
+vim.keymap.del("v", "<A-k>")
 vim.keymap.del("n", "<leader>gg")
 vim.keymap.del("n", "<leader>`")
 vim.keymap.del("n", "<leader>gG")
