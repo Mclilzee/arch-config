@@ -39,6 +39,16 @@ alias ls="lsd"
 alias cat="bat"
 alias grep="rg"
 alias ps="procs"
+alias mv="mv -v"
+
+export PATH="$HOME/.rbenv/versions/3.2.2/bin/:$PATH"
+
+# bun completions
+[ -s "/home/mclilzee/.bun/_bun" ] && source "/home/mclilzee/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # WSL Only
 # alias wslfind="sudo find /bin /boot /dev /etc /home /init /lib /lib64 /lost+found /opt /proc /root /run /sbin /srv /sys /tmp /usr /var"
