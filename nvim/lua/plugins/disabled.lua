@@ -58,31 +58,23 @@ return {
     enabled = false,
   },
 
+  --  Show input bubble
   -- {
-  --   "lukas-reineke/indent-blankline.nvim",
-  -- keys = function()
-  --   return {}
-  -- end,
+  --   "noice.nvim",
+  --   keys = function()
+  --     return {}
+  --   end,
   --   enabled = false,
   -- },
 
-  -- Show input bubble
-  {
-    "noice.nvim",
-    keys = function()
-      return {}
-    end,
-    enabled = false,
-  },
-
-  -- Not sure supposed to show nice boxes
-  {
-    "stevearc/dressing.nvim",
-    keys = function()
-      return {}
-    end,
-    enabled = false,
-  },
+  -- Show nice code action formatting bubble
+  -- {
+  --   "stevearc/dressing.nvim",
+  --   keys = function()
+  --     return {}
+  --   end,
+  --   enabled = false,
+  -- },
 
   {
     "folke/edgy.nvim",
