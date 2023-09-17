@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-prompt=$(echo "$2" | tr " " "+")
-curl cht.sh/"$1"/"$prompt" | bat
