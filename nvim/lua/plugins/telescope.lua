@@ -18,7 +18,7 @@ return {
         { "<leader>sr", "<cmd>Telescope oldfiles<CR>", desc = "Recent" },
         { "<leader>sf", Util.telescope("files"), desc = "Files" },
         { "<leader>sa", Util.telescope("autocommands"), desc = "Auto Commands" },
-        { "<leader>sC", Util.telescope("commands"), desc = "Auto Commands" },
+        { "<leader>sc", Util.telescope("commands"), desc = "Commands" },
         { "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find" },
         { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
         { "<leader>sD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
