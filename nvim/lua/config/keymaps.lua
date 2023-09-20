@@ -61,7 +61,7 @@ local lazyterm = function()
   Util.float_term(nil, { cwd = Util.get_root() })
 end
 
-vim.keymap.set("n", "<leader>t", lazyterm, { desc = "Terminal (root dir)" })
-vim.keymap.set("n", "<leader>T", function()
+vim.keymap.set("n", "<leader>T", lazyterm, { desc = "Terminal (root dir)" })
+vim.keymap.set("n", "<leader>t", function()
   Util.float_term()
 end, { desc = "Terminal (cwd)" })
