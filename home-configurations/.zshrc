@@ -37,7 +37,6 @@ alias cdf='cd $(fd -H -t d | fzf)'
 alias fd="fd -H"
 alias ls="lsd"
 alias cat="bat"
-alias grep="rg"
 alias ps="procs"
 alias mv="mv -v"
 
