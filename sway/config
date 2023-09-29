@@ -63,17 +63,23 @@ exec swayidle -w \
 # Example configuration:
 #
 
-   input "1739:52632:MSFT0004:00_06CB:CD98_Touchpad" {
-       dwt enabled
-       tap enabled
-       natural_scroll enabled
-       middle_emulation enabled
-       accel_profile "flat"
-   }
+input "1739:52632:MSFT0004:00_06CB:CD98_Touchpad" {
+  dwt enabled
+  tap enabled
+  natural_scroll enabled
+  middle_emulation enabled
+  accel_profile "flat"
+}
 
-   input "type:keyboard" {
-      xkb_options caps:escape
-    }
+input "type:keyboard" {
+  xkb_options caps:escape
+}
+
+input "5426:103:Razer_Razer_Naga_Trinity" {
+# input "type:mouse"  {
+  accel_profile "flat"
+}
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
