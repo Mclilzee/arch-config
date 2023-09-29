@@ -16,6 +16,7 @@ font:
   normal:
     # Linux
     family: FiraCodeNerdFont
+    family: JetBrainsMonoNerdFont
     # family: FiraCodeNerdFontMono
     # Windows
     # family: FiraCode NFM
