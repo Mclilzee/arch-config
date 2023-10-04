@@ -19,6 +19,8 @@ return {
         "prettier",
         "js-debug-adapter",
         "eslint-lsp",
+        "html-lsp",
+        "python-lsp-server",
         -- added through lsconfig manually:
         -- "rust-analyzer",
         -- "typescript-language-server",
