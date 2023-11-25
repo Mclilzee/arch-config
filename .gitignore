@@ -7,3 +7,4 @@ vlc/
 QtProject.conf
 VirtualBox/
 /dconf/
+nvim/lazyvim.json
