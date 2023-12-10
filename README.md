@@ -1,6 +1,7 @@
 # Arch config
 
 Personal configuration for Arch, including all installed packages and setups.
+Put repository folders inside `.config`
 Make sure to install the packages inside `packages.txt`:
 ```bash
 sudo pacman -S --needed $(< packages.txt)
