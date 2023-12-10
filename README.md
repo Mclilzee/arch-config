@@ -12,7 +12,7 @@ Follow the steps to do full installation of these configurations
 
 - Clone the repository you don't need the history of it so use depth:
 ```bash
-git clone --depth 1 git@github.com:Mclilzee/arch-fongi.git ~/arch-config
+git clone --depth 1 git@github.com:Mclilzee/arch-config.git ~/arch-config
 ```
 
 - Install packages:
