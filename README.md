@@ -22,7 +22,7 @@ sudo pacman -S --needed $(< ~/arch-config/packages.txt)
 
 - Move home configurations to your home make sure to update .gitconfig to insert your personal information
 ```bash
-mv ~/arch-config/home-configurations/* ~/
+mv ~/arch-config/home-configurations/.* ~/
 ```
 
 - Clean up files
