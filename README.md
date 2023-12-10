@@ -1,14 +1,43 @@
 # Arch config
 
 Personal configuration for Arch, including all installed packages and setups.
-Put repository folders inside `.config`
-Make sure to install the packages inside `packages.txt`:
-```bash
-sudo pacman -S --needed $(< packages.txt)
-```
 
-if you wish to include all the packages that are in this installation, and move the configuration files from `home-configuration` to your home directory, make sure to replace `.gitconfig` info with your personal info.
 
 # Overview Image
 
 ![Arch linux desktop image overview](./assets/arch-overview.png)
+
+# Installation
+Follow the steps to do full installation of these configurations
+
+- Clone the repository you don't need the history of it so use depth:
+```bash
+git clone --depth 1 git@github.com:Mclilzee/arch-fongi.git ~/arch-config
+```
+
+- Install packages:
+```bash
+sudo pacman -S --needed $(< ~/arch-config/packages.txt)
+```
+
+- Move home configurations to your home make sure to update .gitconfig to insert your personal information
+```bash
+mv ~/arch-config/home-configurations/* ~/
+```
+
+- Clean up files
+```bash
+rm -rf ~/arch-config/README.md ~/arch-config/packages.txt ~/arch-config/home-configurations/ ~/arch-config/bin/
+```
+
+- Move configurations to your config directory:
+```bash
+mv ~/arch-config/* ~/.config/
+```
+
+- Remove left over directory
+```bash
+rm -rf ~/arch-config/
+```
+
+You should be all set to go!
