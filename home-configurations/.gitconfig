@@ -8,6 +8,7 @@
   navigate = true
   light = false
   side-by-side = true
+  wrap-max-lines = unlimited
   line-numbers = true
 [merge]
   conflictstyle = diff3
