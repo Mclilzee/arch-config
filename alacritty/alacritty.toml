@@ -1,0 +1,18 @@
+[colors.cursor]
+cursor = "0xffffff"
+custom_colors = true
+
+[colors.primary]
+background = "#050505"
+
+[cursor.style]
+blinking = "On"
+
+[font]
+size = 14
+
+[font.normal]
+family = "JetBrainsMonoNerdFont"
+
+[window]
+opacity = 0.85
