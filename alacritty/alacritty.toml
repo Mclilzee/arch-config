@@ -1,6 +1,5 @@
 [colors.cursor]
 cursor = "0xffffff"
-custom_colors = true
 
 [colors.primary]
 background = "#050505"
