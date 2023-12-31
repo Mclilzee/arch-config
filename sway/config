@@ -37,7 +37,7 @@ bindsym XF86MonBrightnessDown exec light -U "10"
 ### Output configuration
 #
 # Path to background image
-output * bg ~/wallpapers/window-night.png fill
+output * bg ~/wallpapers/lake-and-rocks.jpg fill
 #
 # Example configuration:
 #
@@ -59,9 +59,6 @@ exec swayidle -w \
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
-#
-# Example configuration:
-#
 
 input "1739:52632:MSFT0004:00_06CB:CD98_Touchpad" {
   dwt enabled
@@ -77,6 +74,10 @@ input "type:keyboard" {
 
 input "5426:103:Razer_Razer_Naga_Trinity" {
 # input "type:mouse"  {
+  accel_profile "flat"
+}
+
+input "14538:4145:MOSART_Semi._2.4G_Wireless_Mouse" {
   accel_profile "flat"
 }
 
