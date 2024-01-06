@@ -20,7 +20,6 @@ go
 grim
 grub
 gtop
-htop
 iwd
 jdk-openjdk
 julia
