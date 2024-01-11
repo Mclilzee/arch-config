@@ -40,6 +40,15 @@ alias cat="bat"
 alias ps="procs"
 alias mv="mv -v"
 
+# codef() {
+#   local dir=$(find ./ -type d | fzf)
+#   local regex=".*\.\("
+#   args="$*"
+#   formatted_args=${args// /\\|}
+#   regex+="$formatted_args\)$"
+#   nvim $(find "$dir" -type f -not -path "**/node_modules/*" -not -path "**/dist/*" -regex "$regex")
+# }
+
 export PATH="$HOME/.rbenv/versions/3.2.2/bin/:$PATH"
 
 # bun completions
