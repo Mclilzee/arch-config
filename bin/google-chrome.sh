@@ -9,4 +9,4 @@ else
 	exit 1
 fi
 
-printf 'chrome() {\n\tnohup %s "\\\\\\\\wsl.localhost\\\\Arch\\\\"%s > /dev/null 2>&1 &!\n}\n' "$chrome_path" "\$(realpath \"\${1}\")" >>~/.zshrc
+printf 'chrome() {\n\t%s "\\\\\\\\wsl.localhost\\\\Arch\\\\"%s > /dev/null 2>&1 &!\n}\n' "$chrome_path" "\$(realpath \"\${1}\")" >>~/.zshrc
