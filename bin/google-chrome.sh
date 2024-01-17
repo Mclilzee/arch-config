@@ -9,4 +9,4 @@ else
 	exit 1
 fi
 
-printf 'chrome() {\n\t%s "\\\\\\\\wsl.localhost\\\\Arch\\\\"%s > /dev/null 2>&1 &!\n}\n' "$chrome_path" "\$(realpath \"\${1}\")" >>~/.zshrc
+printf 'chrome() {\n\tlocal file_path="$(realpath "${1}")" 2> /dev/null\n\t%s "\\\\\\\\wsl.localhost\\\\Arch\\\\$file_path" > /dev/null 2>&1 &!\n}\n' "$chrome_path" >>~/.zshrc
