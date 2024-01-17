@@ -9,4 +9,4 @@ else
 	exit 1
 fi
 
-printf 'google-chrome() {\n\tlocal file_path\n\tfile_path=realpath "${1}" 2> /dev/null\n\t%s "\\\\\\\\wsl.localhost\\\\Arch\\\\$file_path" > /dev/null 2>&1 &\n\tdisown\n}\n' "$chrome_path" >>~/.bashrc
+printf 'google-chrome() {\n\tlocal file_path\n\tfile_path=$(realpath "${1}" 2> /dev/null)\n\t%s "\\\\\\\\wsl.localhost\\\\Arch\\\\$file_path" > /dev/null 2>&1 &\n\tdisown\n}\n' "$chrome_path" >>~/.bashrc
