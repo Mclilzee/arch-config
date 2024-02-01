@@ -58,8 +58,12 @@ vim.keymap.set("n", "<leader>lu", "<cmd>LspUninstall<CR>", { desc = "Uninstall" 
 
 -- Terminal
 local lazyterm = function()
-  Util.terminal.open(nil, { cwd = Util.root() })
+  Util.terminal()
 end
 
-vim.keymap.set("n", "<leader>T", lazyterm, { desc = "Terminal (root dir)" })
-vim.keymap.set("n", "<leader>t", Util.terminal.open, { desc = "Terminal (cwd)" })
+local rootTerm = function()
+  Util.terminal(nil, { cwd = Util.root() })
+end
+
+vim.keymap.set("n", "<leader>t", lazyterm, { desc = "Terminal (cwd)" })
+vim.keymap.set("n", "<leader>T", rootTerm, { desc = "Terminal (root dir)" })
