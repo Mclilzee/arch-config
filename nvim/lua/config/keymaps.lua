@@ -58,7 +58,9 @@ vim.keymap.set("n", "<leader>lu", "<cmd>LspUninstall<CR>", { desc = "Uninstall" 
 
 -- Terminal
 local lazyterm = function()
-  Util.terminal()
+  Util.terminal(nil, {
+    -- size = { width = 1, height = 1 },
+  })
 end
 
 local rootTerm = function()
