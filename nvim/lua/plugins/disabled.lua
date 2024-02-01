@@ -121,14 +121,6 @@ return {
   -- Banner
 
   {
-    "goolord/alpha-nvim",
-    keys = function()
-      return {}
-    end,
-    enabled = false,
-  },
-
-  {
     "nvimdev/dashboard-nvim",
     enabled = false,
   },
