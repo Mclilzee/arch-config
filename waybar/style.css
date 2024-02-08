@@ -11,25 +11,25 @@
  * -------------------------------------------------------------------------- */
 
 @keyframes blink-warning {
-    70% {
-        color: white;
-    }
+  70% {
+    color: white;
+  }
 
-    to {
-        color: white;
-        background-color: orange;
-    }
+  to {
+    color: white;
+    background-color: orange;
+  }
 }
 
 @keyframes blink-critical {
-    70% {
-      color: white;
-    }
+  70% {
+    color: white;
+  }
 
-    to {
-        color: white;
-        background-color: red;
-    }
+  to {
+    color: white;
+    background-color: red;
+  }
 }
 
 
@@ -39,21 +39,21 @@
 
 /* Reset all styles */
 * {
-    border: none;
-    border-radius: 0;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: FiraCodeNerdFont;
-    font-weight: bold;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: FiraCodeNerdFont;
+  font-weight: bold;
 }
 
 /* The whole bar */
 window#waybar {
   border: solid 1px rgba(0, 200, 255, 0.4);
   opacity: 0.95;
-	color: #fdf6e3;
+  color: #fdf6e3;
   background-color: #090909;
 }
 
@@ -61,7 +61,7 @@ window#waybar {
 #mode,
 #cpu,
 #memory,
-#temperature,
+#custom-temperature,
 #battery,
 #pulseaudio,
 #network,
@@ -99,69 +99,69 @@ window#waybar {
  * -------------------------------------------------------------------------- */
 
 #battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #battery.warning {
-    color: orange;
+  color: orange;
 }
 
 #battery.critical {
-    color: red;
+  color: red;
 }
 
 #battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
+  animation-name: blink-warning;
+  animation-duration: 3s;
 }
 
 #battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
+  animation-name: blink-critical;
+  animation-duration: 2s;
 }
 
 #clock {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #cpu.warning {
-    color: orange;
+  color: orange;
 }
 
 #cpu.critical {
-    color: red;
+  color: red;
 }
 
 #memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #memory.warning {
-    color: orange;
+  color: orange;
 }
 
 #memory.critical {
-    color: red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
+  color: red;
+  animation-name: blink-critical;
+  animation-duration: 2s;
 }
 
 #mode {
-    background-color: red;
-    padding: 0px 20px;
-    font-weight: bold;
-    /* To compensate for the top border and still have vertical centering */
+  background-color: red;
+  padding: 0px 20px;
+  font-weight: bold;
+  /* To compensate for the top border and still have vertical centering */
 }
 
 /* #network { */
 /* } */
 
 #network.disconnected {
-    color: orange;
+  color: orange;
 }
 
 /* #pulseaudio { */
@@ -171,34 +171,34 @@ window#waybar {
 /* } */
 
 #custom-spotify {
-    color: rgb(102, 220, 105);
+  color: rgb(102, 220, 105);
 }
 
 /* #temperature { */
 /* } */
 
 #temperature.critical {
-    color: red;
+  color: red;
 }
 
 /* #tray { */
 /* } */
 
 #workspaces button {
-    border-top: 2px solid transparent;
-    /* To compensate for the top border and still have vertical centering */
-    padding: 2px 30px;
-    color: #888888;
-    border-radius: 0px 10px 0px 0px;
+  border-top: 2px solid transparent;
+  /* To compensate for the top border and still have vertical centering */
+  padding: 2px 30px;
+  color: #888888;
+  border-radius: 0px 10px 0px 0px;
 }
 
 #workspaces button.focused {
-    border-color: #4c7899;
-    color: white;
-    background-color: #285577;
+  border-color: #4c7899;
+  color: white;
+  background-color: #285577;
 }
 
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+  border-color: #c9545d;
+  color: #c9545d;
 }
