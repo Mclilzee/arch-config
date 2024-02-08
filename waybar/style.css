@@ -61,7 +61,7 @@ window#waybar {
 #mode,
 #cpu,
 #memory,
-#custom-temperature,
+#temperature,
 #battery,
 #pulseaudio,
 #network,
