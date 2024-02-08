@@ -40,7 +40,7 @@ alias cat="bat"
 alias ps="procs"
 alias mv="mv -v"
 
-export PATH="$HOME/.rbenv/versions/3.2.2/bin/:$PATH"
+export PATH="$HOME/.rbenv/versions/3.2.2/bin/:$HOME/.cargo/bin/:$PATH"
 
 # bun completions
 [ -s "/home/mclilzee/.bun/_bun" ] && source "/home/mclilzee/.bun/_bun"
