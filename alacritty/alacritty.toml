@@ -11,7 +11,7 @@ blinking = "On"
 size = 14
 
 [font.normal]
-family = "JetBrainsMonoNerdFont"
+family = "JetBrainsMonoNerdFontMono"
 
 [window]
 opacity = 0.85
