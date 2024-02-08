@@ -22,7 +22,7 @@
         "sway/mode",
         "cpu",
         "memory",
-        "custom/temprature",
+        "custom/temperature",
         "battery",
     ],
     "modules-center": [
@@ -166,7 +166,7 @@
         "tooltip": false
     },
 
-    "custom/temprature": {
+    "custom/temperature": {
       "format": "{icon} {}°C",
       "interval": 5,
       "exec": "$HOME/.config/waybar/bin/cpu-temp.sh",

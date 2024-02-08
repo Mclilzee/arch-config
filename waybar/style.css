@@ -61,7 +61,7 @@ window#waybar {
 #mode,
 #cpu,
 #memory,
-#temperature,
+#custom-temperature,
 #battery,
 #pulseaudio,
 #network,
@@ -73,7 +73,7 @@ window#waybar {
 #mode,
 #cpu,
 #memory,
-#temperature,
+#custom-temperature,
 #battery {
   border-right: solid 3px rgba(0, 200, 255, 0.5);
   border-top-right-radius: 15px;
@@ -174,10 +174,10 @@ window#waybar {
   color: rgb(102, 220, 105);
 }
 
-/* #temperature { */
+/* #custom-temperature { */
 /* } */
 
-#temperature.critical {
+#custom-temperature.critical {
   color: red;
 }
 
