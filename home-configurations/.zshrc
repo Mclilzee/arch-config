@@ -27,8 +27,8 @@ _comp_options+=(globdots)		# Include hidden files.
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
-bindkey '\t' complete-word
-bindkey '^[[Z' autosuggest-accept
+bindkey '^[[Z' complete-word
+bindkey '\t' autosuggest-accept
 
 alias lock="swaylock -f -c 000000"
 alias savepk="pacman -Qttenq > ~/.config/packages.txt"
