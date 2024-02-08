@@ -6,6 +6,7 @@ base
 base-devel
 bat
 composer
+dialog
 discord
 dmenu
 dosfstools
@@ -23,12 +24,12 @@ gtop
 iwd
 jdk-openjdk
 julia
-light
 linux
 linux-firmware
 lsd
 luarocks
 man-db
+man-pages
 mtools
 ncdu
 neofetch
@@ -37,6 +38,7 @@ networkmanager
 noto-fonts-cjk
 noto-fonts-emoji
 npm
+ntfs-3g
 os-prober
 pacman-contrib
 pamixer
@@ -63,6 +65,7 @@ ufw
 usbutils
 vim
 vlc
+vulkan-radeon
 waybar
 wget
 wl-clipboard
