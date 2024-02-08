@@ -73,6 +73,7 @@ input "type:keyboard" {
 
 input "5426:103:Razer_Razer_Naga_Trinity" {
   accel_profile "flat"
+  pointer_accel -0.4
 }
 
 input "14538:4145:MOSART_Semi._2.4G_Wireless_Mouse" {
