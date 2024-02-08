@@ -5,6 +5,7 @@ arch-wiki-lite
 base
 base-devel
 bat
+bottom
 composer
 dialog
 discord
@@ -20,7 +21,6 @@ git-delta
 go
 grim
 grub
-gtop
 iwd
 jdk-openjdk
 julia
