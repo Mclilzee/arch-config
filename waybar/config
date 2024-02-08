@@ -22,7 +22,7 @@
         "sway/mode",
         "cpu",
         "memory",
-        "temperature",
+        "custom/temprature",
         "battery",
     ],
     "modules-center": [
@@ -166,10 +166,11 @@
         "tooltip": false
     },
 
-    "temperature": {
-      "critical-threshold": 80,
+    "custom/temprature": {
+      "format": "{icon} {}°C",
       "interval": 5,
-      "format": "{icon} {temperatureC}°C",
+      "exec": "$HOME/.config/waybar/bin/cpu-temp.sh",
+      "critical-threshold": 80,
       "format-icons": [
           "", // Icon: temperature-empty
           "", // Icon: temperature-quarter
@@ -177,6 +178,6 @@
           "", // Icon: temperature-three-quarters
           ""  // Icon: temperature-full
       ],
-      "tooltip": false
+      "tooltip": false,
     },
 }
