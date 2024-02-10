@@ -8,7 +8,7 @@ background = "#050505"
 blinking = "On"
 
 [font]
-size = 14
+size = 12
 
 [font.normal]
 family = "JetBrainsMonoNerdFontMono"
