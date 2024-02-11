@@ -16,6 +16,7 @@ fd
 firefox
 fish
 fzf
+gimp
 git
 git-delta
 go
@@ -62,10 +63,8 @@ tmux
 ttf-firacode-nerd
 ttf-jetbrains-mono-nerd
 ufw
-usbutils
 vim
 vlc
-vulkan-radeon
 waybar
 wget
 wl-clipboard
@@ -74,4 +73,3 @@ zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
-gimp
