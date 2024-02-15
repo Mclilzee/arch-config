@@ -59,7 +59,11 @@ vim.keymap.set("n", "<leader>lu", "<cmd>LspUninstall<CR>", { desc = "Uninstall" 
 -- Terminal
 local lazyterm = function()
   Util.terminal(nil, {
-    -- size = { width = 1, height = 1 },
+    size = { width = 1, height = 1 },
+    border = "double",
+    margin = { top = 1, bottom = 2, left = 1, right = 1 },
+    title = "NVIM Term",
+    title_pos = "center",
   })
 end
 
