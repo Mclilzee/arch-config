@@ -18,6 +18,7 @@ return {
         "jsonlint",
         "js-debug-adapter",
         "html-lsp",
+        "intelephense",
       },
     },
   },
