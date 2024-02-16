@@ -27,8 +27,8 @@ _comp_options+=(globdots)		# Include hidden files.
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
-bindkey '^[[Z' complete-word
-bindkey '\t' autosuggest-accept
+bindkey '\t' complete-word
+bindkey '^[[Z' autosuggest-accept
 
 alias lock="swaylock -f -c 000000"
 alias savepk="pacman -Qttenq > ~/.config/packages.txt"
@@ -40,7 +40,7 @@ alias cat="bat"
 alias ps="procs"
 alias mv="mv -v"
 
-export PATH="$HOME/.rbenv/versions/3.2.2/bin/:$HOME/.cargo/bin/:$PATH"
+export PATH="$HOME/.rbenv/versions/3.2.2/bin/:$HOME/.cargo/bin/:$HOME/.local/share/Steam/steamapps/common/Aseprite:$PATH"
 
 # bun completions
 [ -s "/home/mclilzee/.bun/_bun" ] && source "/home/mclilzee/.bun/_bun"
