@@ -24,6 +24,7 @@ return {
         "yaml",
         "rust",
         "toml",
+        "ron",
       },
     },
   },
