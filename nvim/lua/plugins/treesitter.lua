@@ -8,6 +8,7 @@ return {
         "html",
         "javascript",
         "jsdoc",
+        "jsonc",
         "json",
         "lua",
         "luadoc",

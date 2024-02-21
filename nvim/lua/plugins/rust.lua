@@ -30,9 +30,6 @@ return {
             loadOutDirsFromCheck = true,
             runBuildScripts = true,
           },
-          rust = {
-            analyzerTargetDir = true,
-          },
           -- Add clippy lints for Rust.
           checkOnSave = {
             allFeatures = true,
