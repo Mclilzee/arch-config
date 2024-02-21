@@ -32,6 +32,7 @@ luarocks
 man-db
 man-pages
 mtools
+nasm
 ncdu
 neofetch
 neovim
@@ -48,6 +49,7 @@ pipewire-alsa
 pipewire-pulse
 procs
 python-pip
+qemu-full
 ripgrep-all
 rmlint
 rustup
@@ -60,6 +62,8 @@ swaylock
 thunderbird
 tldr
 tmux
+tree-sitter
+tree-sitter-cli
 ttf-firacode-nerd
 ttf-jetbrains-mono-nerd
 ufw
