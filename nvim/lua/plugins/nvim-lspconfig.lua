@@ -8,7 +8,7 @@ return {
 
     opts = {
       inlay_hints = {
-        enabled = true,
+        enabled = false,
       },
       servers = {
         rust_analyzer = {},
