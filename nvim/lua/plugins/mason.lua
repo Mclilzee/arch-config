@@ -19,6 +19,7 @@ return {
         "js-debug-adapter",
         "html-lsp",
         "intelephense",
+        "prettier",
       },
     },
   },
