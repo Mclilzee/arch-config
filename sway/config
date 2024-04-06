@@ -25,6 +25,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Custom Keymaps
 bindsym $mod+Shift+p exec grim -g "$(slurp -d)" - | wl-copy
+bindsym $mod+Shift+g exec wf-recorder -g "$(slurp)" -F fps=10 -c gif
 bindsym $mod+Shift+v exec wf-recorder -g "$(slurp)"
 bindsym $mod+p exec grim - | wl-copy
 
