@@ -2,8 +2,6 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
-neofetch
-
 # Powerlevel10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -40,7 +38,7 @@ alias cat="bat"
 alias ps="procs"
 alias mv="mv -v"
 
-export PATH="$HOME/.rbenv/versions/3.2.2/bin/:$HOME/.cargo/bin/:$HOME/.local/share/Steam/steamapps/common/Aseprite:$PATH"
+export PATH="$HOME.cargo/bin/:$HOME.bun/bin/:$HOME.rbenv/versions/3.2.2/bin/:$HOME.local/share/Steam/steamapps/common/Aseprite/:$PATH"
 
 # bun completions
 [ -s "/home/mclilzee/.bun/_bun" ] && source "/home/mclilzee/.bun/_bun"
