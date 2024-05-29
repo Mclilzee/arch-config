@@ -5,7 +5,7 @@ vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 
 local client = vim.lsp.start_client({
   name = "toplsp",
-  cmd = { "node", "/home/mclilzee/repo/toplsp" },
+  cmd = { "node", "/home/mclilzee/repo/toplsp/server/out/main.js" },
 })
 
 if not client then
