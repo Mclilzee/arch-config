@@ -37,6 +37,24 @@ alias ls="lsd"
 alias cat="bat"
 alias ps="procs"
 alias mv="mv -v"
+alias hd="hexdump"
+
+gif() {
+    if [ "$#" -ne 2 ]; then
+        echo "Usage: gif input.mp4 output.gif"
+    else
+        ffmpeg -i "$1" -vf "fps=10,scale=640:-1:flags=lanczos" -y "$2"
+    fi
+}
+
+record() {
+    if [ "$#" -ne 1 ]; then
+        echo "Usage: record output_file.mp4"
+    else
+        wf-recorder -g "$(slurp)" -f "$1"
+    fi
+}
+
 
 export PATH="$HOME.cargo/bin/:$HOME.bun/bin/:$HOME.rbenv/versions/3.2.2/bin/:$HOME.local/share/Steam/steamapps/common/Aseprite/:$PATH"
 
