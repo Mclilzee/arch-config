@@ -80,3 +80,4 @@ xorg-xwayland
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
+mold
