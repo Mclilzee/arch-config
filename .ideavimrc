@@ -1,0 +1,154 @@
+
+
+set acejump
+set hlsearch
+set incsearch
+set crolloff=8
+set history=1000
+set relativenumber
+set nocursorline
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
+set clipboard=unnamedplus
+set guicursor=n-v-c-sm:block,i-ci-ve:block
+set which-key
+
+" Keymap
+let mapleader = " "
+map <leader>sl :noh<CR>
+nmap s <Action>(AceAction)
+map <leader>, :tabprev<CR>
+map <leader>gc <action>(CommentByLineComment)
+map <leader>e :NerdTreeToggle<CR>
+
+" Window splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+
+" Display options
+map <leader>dd <action>(ToggleDistractionFreeMode)
+map <leader>df <action>(ToggleFullScreen)
+
+
+" File navigation
+remap <leader><leader> <action>(SearchEverywhere)
+map <leader>sf <action>(GotoFile)
+map <leader>sr <action>(RecentFiles)
+map <leader>fc <action>(FindInPath)
+map <leader>nf <action>(NewScratchFile)
+
+" Refactoring
+map <leader>ca <action>(ShowIntentionActions)
+map <leader>cr <Action>(RenameElement)
+map <leader>ce <Action>(ExtractMethod)
+map <leader>ci <Action>(IntroduceVariable)
+map <leader>cf <Action>(IntroduceField)
+map <leader>cs <Action>(ChangeSignature)
+map <leader>ch <Action>(Refactorings.QuickListPopupAction)
+
+" Go to code
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
+nmap <leader>gf <Action>(Back)
+nmap <leader>gb <Action>(Forward)
+
+" ideavim settings
+set ideajoin
+set ideamarks
+set idearefactormode=normal
+set ideastatusicon=gray
+
+" buffer (buffer < window < tab)
+nmap <leader>bc <Action>(CloseContent)
+nmap <leader>ba <Action>(CloseAllEditors)
+nmap <leader>bl <Action>(CloseAllEditorsButActive)
+
+nmap <leader>1 <Action>(GoToTab1)
+nmap <leader>2 <Action>(GoToTab2)
+nmap <leader>3 <Action>(GoToTab3)
+nmap <leader>4 <Action>(GoToTab4)
+nmap <leader>5 <Action>(GoToTab5)
+nmap <leader>6 <Action>(GoToTab6)
+nmap <leader>7 <Action>(GoToTab7)
+nmap <leader>8 <Action>(GoToTab8)
+nmap <leader>9 <Action>(GoToTab9)
+
+" menu
+nmap <leader>mm <Action>(MainMenu)
+nmap <leader>ma <Action>(AnalyzeMenu)
+nmap <leader>mb <Action>(BuildMenu)
+nmap <leader>mc <Action>(CodeMenu)
+nmap <leader>mf <Action>(FindMenuGroup)
+nmap <leader>mg <Action>(GoToMenu)
+nmap <leader>ms <Action>(ScopeViewPopupMenu)
+nmap <leader>mt <Action>(EditorTabPopupMenu)
+nmap <leader>mw <Action>(ToolWindowsGroup)
+
+nmap <leader>sh <Action>(LocalHistory.ShowHistory)
+nmap <leader>si <Action>(SelectIn)
+nmap <leader>fp <Action>(FindInPath)
+nmap <leader>rp <Action>(ReplaceInPath)
+nmap <leader>sw <Action>(SearchWeb)
+
+" code
+nmap <leader>fc <Action>(ReformatCode)
+nmap <leader>so <Action>(SelectAllOccurrences)
+
+nmap [b <Action>(PreviousTab)
+nmap ]b <Action>(NextTab)
+map [[ <Action>(GotoPrevElementUnderCaretUsage)
+nmap ]] <Action>(GotoNextElementUnderCaretUsage)
+
+" goto
+nmap <leader>a <Action>(GotoAction)
+nmap ga <Action>(GotoAction)
+nmap gc <Action>(GotoClass)
+nmap gf <Action>(GotoFile)
+nmap gs <Action>(GotoSymbol)
+nmap gt <Action>(GotoTest)
+nmap gT <Action>(TextSearchAction)
+nmap go <Action>(GotoSuperMethod)
+nmap gd <Action>(GotoDeclaration)
+nmap gD <Action>(GotoTypeDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gI <Action>(QuickImplementations)
+nmap gn <Action>(ShowNavBar)
+
+" terminal
+nmap <leader>t <Action>(ActivateTerminal)
+nmap <leader>tc <Action>(Terminal)
+
+" todo
+nmap <leader>x <Action>(DeactivateTODOToolWindow)
+nmap <leader>x <Action>(ActivateTODOToolWindow)
+
+" highlight yank (bundle plugin)
+set highlightedyank
+let g:highlightedyank_highlight_duration = "100"
+let g:highlightedyank_highlight_color = "rgba(57, 197, 255, 155)"
+
+" nerdtree (bundle plugin)
+set NERDTree
+
+" continuous shift
+xnoremap < <gv
+xnoremap > >gv
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
