@@ -58,23 +58,23 @@ return {
     enabled = false,
   },
 
-  --  Show input bubble
-  -- {
-  --   "noice.nvim",
-  --   keys = function()
-  --     return {}
-  --   end,
-  --   enabled = false,
-  -- },
+  -- Show input bubble
+  {
+    "noice.nvim",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
 
   -- Show nice code action formatting bubble
-  -- {
-  --   "stevearc/dressing.nvim",
-  --   keys = function()
-  --     return {}
-  --   end,
-  --   enabled = false,
-  -- },
+  {
+    "stevearc/dressing.nvim",
+    keys = function()
+      return {}
+    end,
+    enabled = false,
+  },
 
   {
     "folke/edgy.nvim",
