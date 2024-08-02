@@ -34,7 +34,6 @@ alias cp="cp -v"
 alias cdf='cd $(fd -H -t d | fzf)'
 alias fd="fd -H"
 alias ls="lsd"
-alias cat="bat"
 alias ps="procs"
 alias mv="mv -v"
 alias hd="hexdump"
@@ -56,7 +55,7 @@ record() {
 }
 
 
-export PATH="$HOME.cargo/bin/:$HOME.bun/bin/:$HOME.rbenv/versions/3.2.2/bin/:$HOME.local/share/Steam/steamapps/common/Aseprite/:$PATH"
+export PATH="$HOME.cargo/bin/:$HOME.bun/bin/:$HOME.rbenv/versions/3.2.2/bin/:/home/mclilzee/.local/share/Steam/steamapps/common/Aseprite:$PATH"
 
 # bun completions
 [ -s "/home/mclilzee/.bun/_bun" ] && source "/home/mclilzee/.bun/_bun"
@@ -80,7 +79,8 @@ HISTFILE=~/.cache/zsh/history
 
 # Edit line in vim with ctrl-k:
 autoload edit-command-line; zle -N edit-command-line
-export EDITOR=nvim
+# Change editor between nvim and vim
+export EDITOR=vim
 bindkey '^k' edit-command-line
 
 # zsh-syntax-highlighting
