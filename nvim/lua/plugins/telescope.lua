@@ -12,7 +12,6 @@ return {
         { "<leader>gB", LazyVim.pick("git_branches"), desc = "Branches" },
         -- search
         { "<leader><space>", LazyVim.pick("buffers"), desc = "Display Buffers" },
-
         { "<leader>sg", LazyVim.pick("live_grep"), desc = "Live Grep" },
         { "<leader>sr", "<cmd>Telescope oldfiles<CR>", desc = "Recent" },
         { "<leader>sf", LazyVim.pick("files"), desc = "Files" },
@@ -24,8 +23,8 @@ return {
         { "<leader>sh", LazyVim.pick("help_tags"), desc = "Help Pages" },
         { "<leader>sH", "<cmd>Telescope highlights<cr>", desc = "Highlight Groups" },
         { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
-        { "<leader>sM", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
-        { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Mark" },
+        { "<leader>sm", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
+        { "<leader>sM", "<cmd>Telescope marks<cr>", desc = "Mark" },
         { "<leader>so", "<cmd>Telescope vim_options<cr>", desc = "Options" },
         { "<leader>sR", LazyVim.pick("registers"), desc = "Register" },
         {
