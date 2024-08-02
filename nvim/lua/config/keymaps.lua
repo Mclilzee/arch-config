@@ -26,8 +26,6 @@ vim.keymap.del("n", "<leader><tab>[")
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
 
-local Util = require("lazyvim.util")
-
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste While Holding Clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete While Holding Clipboard" })
@@ -37,15 +35,21 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Selected Up" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Selected Down" })
 
 -- Center Screen after moving up and down
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- Center Screen after searching
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+-- vim.keymap.set("n", "n", "nzzzv")
+-- vim.keymap.set("n", "N", "Nzzzv")
 
 -- Go to other buffer
-vim.keymap.set("n", "<leader>,", "<cmd>e #<CR>", { desc = "Previous Buffer" })
+vim.keymap.set("n", "<leader>,", "<cmd>e #<CR>", { desc = "Latest Buffers toggle" })
+
+-- Tabs
+vim.keymap.set("n", "<tab>l", "<cmd>tabnext<CR>", { desc = "Next tab" })
+vim.keymap.set("n", "<tab>h", "<cmd>tabprevious<CR>", { desc = "Previous tab" })
+vim.keymap.set("n", "<tab>n", "<cmd>tab split<CR>", { desc = "Tab split" })
+vim.keymap.set("n", "<tab>o", "<cmd>tabonly<CR>", { desc = "Close all other tabs" })
 
 -- LSP
 vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = "Restart" })
@@ -57,4 +61,4 @@ vim.keymap.set("n", "<leader>lI", "<cmd>LspInstall<CR>", { desc = "Install" })
 vim.keymap.set("n", "<leader>lu", "<cmd>LspUninstall<CR>", { desc = "Uninstall" })
 
 -- Terminal
-vim.keymap.set("n", "<leader>t", "<cmd>term<CR>", { desc = "Terminal (cwd)" })
+vim.keymap.set("n", "<leader>t", "<cmd>term<CR>i", { desc = "Terminal (cwd)" })
