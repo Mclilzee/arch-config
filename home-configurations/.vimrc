@@ -1,17 +1,18 @@
 set relativenumber
 set laststatus=2
 set nocompatible
-
-" Enable break indent
+set path+=**
+set wildmenu
 set breakindent
-
-" Highlighting
 set nohlsearch
 set nocursorline
 set conceallevel=0
-
-" Number of entries in a popup
 set pumheight=0
-
-" Scrolloff
 set scrolloff=8
+syntax on
+
+set background=dark
+set termguicolors
+let g:gruvbox_transparent_bg=1
+colorscheme gruvbox
+hi Normal guibg=NONE
