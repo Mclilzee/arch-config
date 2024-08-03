@@ -1,3 +1,4 @@
+syntax on
 set relativenumber
 set laststatus=2
 set wildmenu
@@ -8,7 +9,10 @@ set nocursorline
 set conceallevel=0
 set pumheight=0
 set scrolloff=8
-syntax on
+set expandtab
+set shiftwidth=4
+set smartindent
+set autoindent
 
 set background=dark
 set termguicolors
@@ -33,10 +37,10 @@ nmap ! :!
 "  Control windows and open term in new tab
 map <leader>w <C-w>
 map <leader>t <cmd>term<CR>
-nmap <leader>l <C-w>l
-nmap <leader>h <C-w>h
-nmap <leader>j <C-w>j
-nmap <leader>k <C-w>k
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
 
 "  Move selected up and down
 vmap J <cmd>m '>+1<CR>gv=gv
