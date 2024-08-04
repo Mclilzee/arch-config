@@ -83,6 +83,30 @@ vim.opt.rtp:prepend(lazypath)
 -- Configure and install plugins
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  {
+    'ellisonleao/gruvbox.nvim',
+    opts = {
+      transparent_mode = true,
+      italic = {
+        strings = false,
+        comments = false,
+        operators = false,
+        folds = false,
+      },
+    },
+  },
+
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    opts = {
+      indent = {
+        tab_char = '┊',
+        char = '┊',
+      },
+    },
+  },
+
   -- Here is a more advanced example where we pass configuration
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
@@ -279,8 +303,8 @@ require('lazy').setup({
       format_on_save = false,
       formatters_by_ft = {
         lua = { 'stylua' },
-        python = { "isort", "black" },
-        javascript = { "prettier", "prettierd", stop_after_First = true},
+        python = { 'isort', 'black' },
+        javascript = { 'prettier', 'prettierd', stop_after_First = true },
       },
     },
   },
@@ -400,20 +424,21 @@ require('lazy').setup({
     end,
   },
 
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+  {
+    'ellisonleao/gruvbox.nvim',
+    opts = {
+      transparent_mode = true,
+      italic = {
+        strings = false,
+        comments = false,
+        operators = false,
+        folds = false,
+      },
+    },
 
-      -- You can configure highlights by doing something like:
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'gruvbox'
       vim.cmd.hi 'Comment gui=none'
     end,
   },
