@@ -41,4 +41,24 @@ return {
       end
     end,
   },
+  {
+    "folke/which-key.nvim",
+    opts = {
+      plugins = { spelling = true },
+      spec = {
+        mode = { "n", "v" },
+        { "<leader>c", group = "Code" },
+        { "<leader>f", group = "Files" },
+        { "<leader>g", group = "Git" },
+        { "<leader>l", group = "LSP" },
+        { "<leader>s", group = "Search" },
+        { "<leader>u", group = "UI" },
+        { "<leader>w", group = "Window" },
+        { "<leader>x", group = "Diagnostics/Quickfix" },
+        { "[", group = "Prev" },
+        { "]", group = "Next" },
+        { "g", group = "Goto" },
+      },
+    },
+  },
 }
