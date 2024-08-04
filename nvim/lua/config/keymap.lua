@@ -15,10 +15,10 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selected Down' })
 -- Go to other buffer
 vim.keymap.set('n', '<leader><space>', '<cmd>e #<CR>', { desc = 'Latest Buffers toggle' })
 -- Tabs
-vim.keymap.set('n', '<tab>l', '<cmd>tabnext<CR>', { desc = 'Next tab' })
-vim.keymap.set('n', '<tab>h', '<cmd>tabprevious<CR>', { desc = 'Previous tab' })
-vim.keymap.set('n', '<tab>n', '<cmd>tab split<CR>', { desc = 'Tab split' })
-vim.keymap.set('n', '<tab>o', '<cmd>tabonly<CR>', { desc = 'Close all other tabs' })
+vim.keymap.set('n', '<leader><Tab>l', '<cmd>tabnext<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', '<leader><Tab>h', '<cmd>tabprevious<CR>', { desc = 'Previous tab' })
+vim.keymap.set('n', '<leader><Tab>n', '<cmd>tab split<CR>', { desc = 'Tab split' })
+vim.keymap.set('n', '<leader><Tab>o', '<cmd>tabonly<CR>', { desc = 'Close all other tabs' })
 -- LSP
 vim.keymap.set('n', '<leader>lr', '<cmd>LspRestart<CR>', { desc = 'Restart' })
 vim.keymap.set('n', '<leader>li', '<cmd>LspInfo<CR>', { desc = 'Info' })
