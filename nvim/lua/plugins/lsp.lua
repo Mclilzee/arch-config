@@ -27,6 +27,7 @@ return {
           end
           map('<leader>cr', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+          map('<leader>cd', vim.diagnostic.open_float, '[C]ode [D]iagnostic')
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
