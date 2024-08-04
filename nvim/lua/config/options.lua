@@ -1,4 +1,6 @@
 vim.opt.wildmode = 'full:lastused'
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
@@ -12,7 +14,6 @@ vim.opt.scrolloff = 8
 vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
--- Hide signs on the left bar
 vim.opt.signcolumn = 'no'
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
