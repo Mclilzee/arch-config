@@ -32,7 +32,7 @@ return {
       vim.keymap.set('n', '<leader>D', builtin.lsp_type_definitions, { desc = 'Type Definition' })
       vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, { desc = 'Search Symbols' })
       vim.keymap.set('n', '<leader>sS', builtin.lsp_dynamic_workspace_symbols, { desc = 'Search Workspace Symbols' })
-      vim.keymap.set('n', '<leader>sF', builtin.find_files, { desc = 'Search Files' })
+      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search Files' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search Help' })
       vim.keymap.set('n', '<leader>sm', builtin.man_pages, { desc = 'Search Man pages' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search Keymaps' })
@@ -60,11 +60,6 @@ return {
         end
         vim.notify('No previous terminal command found.', vim.log.levels.INFO)
       end, { desc = 'Reuse last used command' })
-      vim.keymap.set('n', '<leader>sf', function()
-        if not pcall(builtin.git_files) then
-          builtin.find_files()
-        end
-      end, { desc = '[S]earch [F]iles' })
       vim.keymap.set('n', '<leader>/', function()
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
           winblend = 10,
