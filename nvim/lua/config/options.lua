@@ -1,4 +1,5 @@
 vim.opt.wildmode = 'full:lastused'
+vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
