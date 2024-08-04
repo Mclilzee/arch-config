@@ -47,19 +47,6 @@ return {
       end, { desc = 'Search Home' })
       vim.keymap.set('n', '<leader>sc', builtin.command_history, { desc = 'Search Commands History' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Find existing buffers' })
-      vim.keymap.set('n', '<leader>.', function()
-        local history = vim.cmd 'history'
-        vim.notify(history, vim.log.levels.INFO)
-        print(history)
-        for i = #history, 1, -1 do
-          local cmd = history[i]
-          if cmd:sub(1, 1) == '!' then
-            vim.cmd(cmd)
-            return
-          end
-        end
-        vim.notify('No previous terminal command found.', vim.log.levels.INFO)
-      end, { desc = 'Reuse last used command' })
       vim.keymap.set('n', '<leader>/', function()
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
           winblend = 10,
