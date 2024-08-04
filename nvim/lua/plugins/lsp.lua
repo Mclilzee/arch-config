@@ -92,7 +92,7 @@ return {
         'js-debug-adapter',
         'html-lsp',
         'intelephense',
-        'prettier'
+        'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
