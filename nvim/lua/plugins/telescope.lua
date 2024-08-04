@@ -26,6 +26,13 @@ return {
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
       local builtin = require 'telescope.builtin'
+      vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = 'Goto Definition' })
+      vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = 'Goto References' })
+      vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = 'Goto Implementation' })
+      vim.keymap.set('n', '<leader>D', builtin.lsp_type_definitions, { desc = 'Type Definition' })
+      vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, { desc = 'Search Symbols' })
+      vim.keymap.set('n', '<leader>sS', builtin.lsp_dynamic_workspace_symbols, { desc = 'Search Workspace Symbols' })
+      vim.keymap.set('n', '<leader>sF', builtin.find_files, { desc = 'Search Files' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search Help' })
       vim.keymap.set('n', '<leader>sm', builtin.man_pages, { desc = 'Search Man pages' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search Keymaps' })
@@ -58,7 +65,6 @@ return {
           builtin.find_files()
         end
       end, { desc = '[S]earch [F]iles' })
-
       vim.keymap.set('n', '<leader>/', function()
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
           winblend = 10,

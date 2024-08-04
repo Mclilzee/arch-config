@@ -1,3 +1,7 @@
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
+vim.g.have_nerd_font = true
+
 vim.keymap.set('n', '<leader>e', '<cmd>ex.<CR>')
 vim.keymap.set('n', '<leader>w', '<C-w>')
 vim.keymap.set('n', '!', ':!')
