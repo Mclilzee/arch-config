@@ -80,7 +80,7 @@ HISTFILE=~/.cache/zsh/history
 # Edit line in vim with ctrl-k:
 autoload edit-command-line; zle -N edit-command-line
 # Change editor between nvim and vim
-export EDITOR=vim
+export EDITOR=nvim
 bindkey '^k' edit-command-line
 
 # zsh-syntax-highlighting
