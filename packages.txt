@@ -29,6 +29,7 @@ julia
 linux
 linux-firmware
 lsd
+lua51
 luarocks
 man-db
 man-pages
@@ -45,7 +46,6 @@ noto-fonts-cjk
 noto-fonts-emoji
 npm
 ntfs-3g
-openssh
 os-prober
 pacman-contrib
 pamixer
@@ -71,6 +71,7 @@ swaylock
 thunderbird
 tldr
 tmux
+traceroute
 tree-sitter-cli
 ttf-firacode-nerd
 ttf-jetbrains-mono-nerd
@@ -80,7 +81,6 @@ vlc
 waybar
 wf-recorder
 wget
-wine
 wl-clipboard
 xorg-xwayland
 zsh-autosuggestions
