@@ -35,7 +35,6 @@ return {
       spec = {
         mode = { 'n', 'v' },
         { '<leader>c', group = 'Code' },
-        { '<leader>f', group = 'Files' },
         { '<leader>g', group = 'Git' },
         { '<leader>l', group = 'LSP' },
         { '<leader>s', group = 'Search' },

@@ -48,7 +48,5 @@ vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decreas
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 -- Extra
 vim.keymap.set("n", "<leader>m", "<cmd>messages<cr>", { desc = "Show messages" })
--- Files
-vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 
 return {}
