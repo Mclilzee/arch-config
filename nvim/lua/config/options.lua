@@ -1,7 +1,7 @@
 vim.opt.wildmode = 'full:lastused'
--- vim.opt.expandtab = true
--- vim.opt.tabstop = 4
--- vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
@@ -21,20 +21,17 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.list = true
 vim.opt.wildmode = 'longest:full,full'
-
-
-vim.diagnostic.config({
+vim.diagnostic.config {
   virtual_text = {
     source = true,
   },
   underline = {
-    severity = vim.diagnostic.severity.ERROR
+    severity = vim.diagnostic.severity.ERROR,
   },
-  signs = {
-  },
+  signs = {},
   float = {
     source = true,
-  }
-})
+  },
+}
 
 return {}
