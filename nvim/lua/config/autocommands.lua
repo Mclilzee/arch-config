@@ -1,5 +1,5 @@
 vim.cmd 'autocmd TextYankPost * silent! lua vim.highlight.on_yank { clear = true}'
-vim.cmd 'autocmd BufEnter * set formatoptions-=cro'
+-- vim.cmd 'autocmd BufEnter * set formatoptions-=cro'
 
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufEnter' }, {
   pattern = { '*.html', '*.css', '*.js', '*.ts', '*.lua' },

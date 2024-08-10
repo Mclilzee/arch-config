@@ -20,7 +20,6 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.list = true
-vim.opt.wildmode = 'longest:full,full'
 vim.diagnostic.config {
   virtual_text = {
     source = true,
