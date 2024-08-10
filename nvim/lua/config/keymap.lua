@@ -41,12 +41,12 @@ vim.keymap.set('n', '<leader>lS', '<cmd>LspStop<CR>', { desc = 'Stop' })
 vim.keymap.set('n', '<leader>lI', '<cmd>LspInstall<CR>', { desc = 'Install' })
 vim.keymap.set('n', '<leader>lu', '<cmd>LspUninstall<CR>', { desc = 'Uninstall' })
 -- Terminal
-vim.keymap.set('n', '<leader>t', '<cmd>term<CR>i', { desc = 'Terminal (cwd)' })
+vim.keymap.set('n', '<leader>t', '<cmd>term<CR>i', { desc = 'Terminal' })
 vim.keymap.set('n', '<leader>.', '<cmd>!!<CR>', { desc = 'Repeat last shell command' })
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic Quickfix list' })
 -- Exit terminal mode in the builtin terminal with a shortcut
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 -- Extra

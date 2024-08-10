@@ -53,10 +53,10 @@ return {
       local lspconfig = require 'lspconfig'
       lspconfig.lua_ls.setup {}
       lspconfig.rust_analyzer.setup {}
-      vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = '[R]e[n]ame' })
-      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[C]ode [A]ction' })
-      vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = '[C]ode [D]iagnostic' })
-      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = '[G]oto [D]eclaration' })
+      vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })
+      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
+      vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
+      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
     end,
 
   },
