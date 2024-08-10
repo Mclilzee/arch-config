@@ -26,14 +26,21 @@ return {
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
       local builtin = require 'telescope.builtin'
+      -- Git
+      vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = 'Commits' })
+      vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = 'Status' })
+      vim.keymap.set('n', '<leader>gB', builtin.git_bcommits, { desc = 'Branches Commits' })
+      vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = 'Branches' })
+      vim.keymap.set('n', '<leader>gS', builtin.git_stash, { desc = 'Stash' })
+      -- Keymaps
       vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = 'Goto Definition' })
       vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = 'Goto References' })
       vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = 'Goto Implementation' })
-      vim.keymap.set('n', '<leader>D', builtin.lsp_type_definitions, { desc = 'Type Definition' })
+      vim.keymap.set('n', 'gt', builtin.lsp_type_definitions, { desc = 'Type Definition' })
       vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, { desc = 'Search Symbols' })
       vim.keymap.set('n', '<leader>sS', builtin.lsp_dynamic_workspace_symbols, { desc = 'Search Workspace Symbols' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search Files' })
-      vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search Help' })
+      vim.keymap.set('n', '<leader>sH', builtin.help_tags, { desc = 'Search Help' })
       vim.keymap.set('n', '<leader>sm', builtin.man_pages, { desc = 'Search Man pages' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search Keymaps' })
       vim.keymap.set('n', '<leader>sb', builtin.builtin, { desc = 'Search Builtin' })
@@ -42,11 +49,11 @@ return {
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Search Diagnostics' })
       vim.keymap.set('n', '<leader>sR', builtin.resume, { desc = 'Search Resume' })
       vim.keymap.set('n', '<leader>sr', builtin.oldfiles, { desc = 'Search Recent Files' })
+      vim.keymap.set('n', '<leader>sc', builtin.command_history, { desc = 'Search Commands History' })
+      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Find existing buffers' })
       vim.keymap.set('n', '<leader>sh', function()
         builtin.find_files { cwd = '~' }
       end, { desc = 'Search Home' })
-      vim.keymap.set('n', '<leader>sc', builtin.command_history, { desc = 'Search Commands History' })
-      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Find existing buffers' })
       vim.keymap.set('n', '<leader>/', function()
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
           winblend = 10,
