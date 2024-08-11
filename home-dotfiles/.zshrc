@@ -54,7 +54,6 @@ record() {
     fi
 }
 
-
 export PATH="$HOME.cargo/bin/:$HOME.bun/bin/:$HOME.rbenv/versions/3.2.2/bin/:/home/mclilzee/.local/share/Steam/steamapps/common/Aseprite:$PATH"
 
 # bun completions
