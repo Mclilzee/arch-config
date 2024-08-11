@@ -64,13 +64,6 @@ export PATH="$HOME.cargo/bin/:$HOME.bun/bin/:$HOME.rbenv/versions/3.2.2/bin/:/ho
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# WSL Only
-# alias wslfind="sudo find /bin /boot /dev /etc /home /init /lib /lib64 /lost+found /opt /proc /root /run /sbin /srv /sys /tmp /usr /var"
-# alias rootfind="sudo find / -xdev"
-# if [[ $PWD == "/mnt/c/Windows/System32" ]]; then
-#   cd
-# fi
-
 autoload -U colors && colors
 
 HISTSIZE=10000
