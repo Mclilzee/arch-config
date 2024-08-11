@@ -62,6 +62,7 @@ rmlint
 rustup
 slurp
 steam
+stow
 stress
 sway
 swaybg
