@@ -1,10 +1,10 @@
+vim.opt.path = '.,,**'
 vim.opt.wildmode = 'full:lastused'
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
-vim.opt.showmode = false
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
