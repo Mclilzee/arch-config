@@ -9,5 +9,5 @@ if [ ! -d "$config_directory" ]; then
 fi
 
 stow  "config_dotfiles" -v -t "$config_directory"
-stow "home_dotfiles" -v -t "$HOME" 
-stow bin -v -t "/usr/local/bin" 
+stow "home_dotfiles" -v -t "$HOME"
+stow bin -v -t "/usr/local/bin"
