@@ -1,0 +1,8 @@
+#! /usr/bin/bash
+
+output="${1%.*}"
+clang -o "$output" "$1" -Wall -Wextra
+
+./"$output"
+
+rm "$output"
