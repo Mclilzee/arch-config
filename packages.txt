@@ -87,3 +87,4 @@ xorg-xwayland
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
+net-tools
