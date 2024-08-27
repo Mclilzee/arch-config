@@ -10,7 +10,7 @@ return {
         typescriptreact = { 'eslint_d' },
         javascript = { 'eslint_d' },
         javascriptreact = { 'eslint_d' },
-        json = { 'eslint_d' },
+        json = { 'jsonlint' },
         shellcheck = { "bash" },
       }
 
