@@ -2,7 +2,7 @@
 cursor = "0xffffff"
 
 [colors.primary]
-background = "#101010"
+background = "#181818"
 
 [cursor.style]
 blinking = "On"
