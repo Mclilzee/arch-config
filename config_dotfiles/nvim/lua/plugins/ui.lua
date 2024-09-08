@@ -1,10 +1,17 @@
 return {
   {
-    'folke/tokyonight.nvim',
+    'rebelot/kanagawa.nvim',
     priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-      vim.cmd.hi 'Comment gui=none'
+    config = function()
+      require('kanagawa').setup {
+        undercurl = false,
+        transparent = true,
+        compile = true,
+        colors = {
+          theme = { all = { ui = { bg_gutter = 'none' } } },
+        },
+      }
+      vim.cmd.colorscheme 'kanagawa'
     end,
   },
   {
