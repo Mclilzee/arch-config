@@ -1,5 +1,4 @@
 local servers_configs = {
-  -- Edit configs manually here
   rust_analyzer = {
     settings = {
       ["rust-analyzer"] = {

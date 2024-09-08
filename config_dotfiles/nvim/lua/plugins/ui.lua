@@ -4,7 +4,7 @@ return {
     priority = 1000,
     config = function()
       require('kanagawa').setup {
-        undercurl = false,
+        undercurl = true,
         transparent = true,
         compile = true,
         colors = {
