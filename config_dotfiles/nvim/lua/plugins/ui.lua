@@ -1,17 +1,17 @@
 return {
   {
-    'rebelot/kanagawa.nvim',
-    priority = 1000,
+    'ellisonleao/gruvbox.nvim',
     config = function()
-      require('kanagawa').setup {
-        undercurl = true,
-        transparent = true,
-        compile = true,
-        colors = {
-          theme = { all = { ui = { bg_gutter = 'none' } } },
+      require('gruvbox').setup {
+        transparent_mode = true,
+        italic = {
+          strings = false,
+          comments = false,
+          operators = false,
+          folds = false,
         },
       }
-      vim.cmd.colorscheme 'kanagawa'
+      vim.cmd.colorscheme 'gruvbox'
     end,
   },
   {
@@ -21,6 +21,9 @@ return {
       indent = {
         tab_char = '┊',
         char = '┊',
+      },
+      scope = {
+        enabled = false,
       },
     },
   },
