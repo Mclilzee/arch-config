@@ -8,7 +8,7 @@ client.focused #4c7899 #285577 #ffffff #2e9ef4 #00C8FF
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
-# Logo key. Use Mod1 for Alt, Mod4 for Super.
+# Logo key. Use Mod1 for Alt, Mod4 for Super (Key with windows icon).
 set $mod Mod1
 # Home row direction keys, like vim
 set $left h
