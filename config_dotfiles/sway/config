@@ -69,7 +69,7 @@ input "1739:52632:MSFT0004:00_06CB:CD98_Touchpad" {
 
 input "type:keyboard" {
   # Set options for key mapping
-  # xkb_options caps:escape
+  xkb_options caps:escape
 }
 
 input "5426:103:Razer_Razer_Naga_Trinity" {
