@@ -56,13 +56,6 @@ record() {
 
 export PATH="$HOME/.cargo/bin/:$HOME/.bun/bin/:$HOME/.rbenv/versions/3.2.2/bin/:$HOME/.local/share/Steam/steamapps/common/Aseprite:$PATH"
 
-# bun completions
-[ -s "/home/mclilzee/.bun/_bun" ] && source "/home/mclilzee/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 autoload -U colors && colors
 
 HISTSIZE=10000
