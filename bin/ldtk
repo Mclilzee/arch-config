@@ -1,0 +1,2 @@
+#!/bin/bash
+npm --prefix ~/repo/ldtk/app/ run start > /dev/null 2>&1 & disown
