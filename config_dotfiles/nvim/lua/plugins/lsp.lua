@@ -15,7 +15,7 @@ vim.list_extend(ensure_installed, {
   'clangd',
   'lua_ls',
   'rust_analyzer',
-  'ts_ls',
+  'tsserver',
   'bashls',
   'cssls',
   'html',
