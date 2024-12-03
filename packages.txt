@@ -58,7 +58,6 @@ python-pip
 qemu-full
 redis
 ripgrep-all
-rmlint
 rustup
 slurp
 steam
