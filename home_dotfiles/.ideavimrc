@@ -1,9 +1,6 @@
-
-
-set acejump
 set hlsearch
 set incsearch
-set crolloff=8
+set scrolloff=8
 set history=1000
 set relativenumber
 set nocursorline
@@ -17,12 +14,10 @@ set guicursor=n-v-c-sm:block,i-ci-ve:block
 set which-key
 
 " Keymap
-let mapleader = " "
+let mapleader = ","
 map <leader>sl :noh<CR>
-nmap s <Action>(AceAction)
-map <leader>, :tabprev<CR>
-map <leader>gc <action>(CommentByLineComment)
-map <leader>e :NerdTreeToggle<CR>
+map <leader><Space> :tabprev<CR>
+map gc <action>(CommentByLineComment)
 
 " Window splits
 map <leader>wv <Action>(SplitVertically)
@@ -132,9 +127,6 @@ nmap <leader>x <Action>(ActivateTODOToolWindow)
 set highlightedyank
 let g:highlightedyank_highlight_duration = "100"
 let g:highlightedyank_highlight_color = "rgba(57, 197, 255, 155)"
-
-" nerdtree (bundle plugin)
-set NERDTree
 
 " continuous shift
 xnoremap < <gv
