@@ -18,6 +18,11 @@ let mapleader = ","
 map <leader>sl :noh<CR>
 map <leader><Space> :tabprev<CR>
 map gc <action>(CommentByLineComment)
+nmap <Esc> :nohlsearch<CR>
+nmap <C-h> <C-w><C-h>
+nmap <C-l> <C-w><C-l>
+nmap <C-j> <C-w><C-j>
+nmap <C-k> <C-w><C-k>
 
 " Window splits
 map <leader>wv <Action>(SplitVertically)
@@ -41,7 +46,7 @@ nmap <leader>cf <Action>(ReformatCode)
 map <leader>cr <Action>(RenameElement)
 map <leader>ce <Action>(ExtractMethod)
 map <leader>ci <Action>(IntroduceVariable)
-map <leader>cf <Action>(IntroduceField)
+map <leader>cF <Action>(IntroduceField)
 map <leader>cs <Action>(ChangeSignature)
 map <leader>ch <Action>(Refactorings.QuickListPopupAction)
 
@@ -116,8 +121,8 @@ nmap gI <Action>(QuickImplementations)
 nmap gn <Action>(ShowNavBar)
 
 " terminal
-nmap <leader>t <Action>(ActivateTerminal)
-nmap <leader>tc <Action>(Terminal)
+" nmap <leader>t <Action>(ActivateTerminal)
+nmap <leader>t <Action>(OpenTerminal)
 
 " todo
 nmap <leader>x <Action>(DeactivateTODOToolWindow)
