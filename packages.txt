@@ -89,4 +89,4 @@ zsh-completions
 zsh-syntax-highlighting
 net-tools
 bc
-
+usbutils
