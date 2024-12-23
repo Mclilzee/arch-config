@@ -1,3 +1,4 @@
+linux-headers
 alacritty
 ansible
 arch-wiki-docs
@@ -87,3 +88,5 @@ zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
 net-tools
+bc
+
