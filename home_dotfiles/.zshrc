@@ -37,6 +37,7 @@ alias ls="lsd"
 alias ps="procs"
 alias mv="mv -v"
 alias hd="hexdump"
+alias grep="grep --color=always"
 
 gif() {
     if [ "$#" -ne 2 ]; then
