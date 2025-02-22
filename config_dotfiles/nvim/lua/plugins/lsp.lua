@@ -1,9 +1,9 @@
 local servers_configs = {
   rust_analyzer = {
     settings = {
-      ["rust-analyzer"] = {
+      ['rust-analyzer'] = {
         checkOnSave = {
-          command = "clippy",
+          command = 'clippy',
         },
       },
     },
@@ -28,9 +28,9 @@ return {
     'williamboman/mason.nvim',
     opts = {
       ensure_installed = {
-        "stylua"
-      }
-    }
+        'stylua',
+      },
+    },
   },
   {
     'williamboman/mason-lspconfig.nvim',
@@ -57,6 +57,5 @@ return {
       vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
     end,
-
   },
 }

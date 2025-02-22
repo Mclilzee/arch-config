@@ -7,7 +7,7 @@ vim.keymap.set('n', 'Q', '<nop>')
 vim.keymap.set('n', 's', '<nop>')
 vim.keymap.set("n", "<space>", ',', { desc = 'Move Search forward' })
 -- Files and windows
-vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>', { desc = 'Open files tree' })
+vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR><cmd>set relativenumber<CR>', { desc = 'Open files tree' })
 vim.keymap.set('n', '<leader>o', '<C-w>o', { desc = 'Only current window' })
 -- Use CTRL+<hjkl> to switch between windows
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
