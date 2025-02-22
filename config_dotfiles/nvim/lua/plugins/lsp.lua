@@ -15,7 +15,7 @@ vim.list_extend(ensure_installed, {
   'clangd',
   'lua_ls',
   'rust_analyzer',
-  'tsserver',
+  'ts_ls',
   'bashls',
   'cssls',
   'html',
@@ -23,6 +23,7 @@ vim.list_extend(ensure_installed, {
 })
 
 return {
+  { 'neovim/nvim-lspconfig' },
   { 'j-hui/fidget.nvim', opts = {} },
   {
     'williamboman/mason.nvim',
@@ -41,21 +42,25 @@ return {
           function(server_name)
             local server = servers_configs[server_name] or {}
             require('lspconfig')[server_name].setup(server)
+
+            vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })
+            vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
+            vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
+            vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
+          end,
+
+          rust_analyzer = function()
+            require('lspconfig').rust_analyzer.setup {
+              single_file_support = false,
+            }
+          end,
+          lua_ls = function()
+            require('lspconfig').lua_ls.setup {
+              single_file_support = false,
+            }
           end,
         },
       }
-    end,
-  },
-  {
-    'neovim/nvim-lspconfig',
-    config = function()
-      local lspconfig = require 'lspconfig'
-      lspconfig.lua_ls.setup {}
-      lspconfig.rust_analyzer.setup {}
-      vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })
-      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
-      vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
-      vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
     end,
   },
 }
