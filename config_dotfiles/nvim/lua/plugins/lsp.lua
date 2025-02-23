@@ -41,23 +41,14 @@ return {
         handlers = {
           function(server_name)
             local server = servers_configs[server_name] or {}
+            server.on_attach = function()
+              vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })
+              vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
+              vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
+              vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
+            end
+            server.single_file_support = false
             require('lspconfig')[server_name].setup(server)
-
-            vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })
-            vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
-            vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
-            vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
-          end,
-
-          rust_analyzer = function()
-            require('lspconfig').rust_analyzer.setup {
-              single_file_support = false,
-            }
-          end,
-          lua_ls = function()
-            require('lspconfig').lua_ls.setup {
-              single_file_support = false,
-            }
           end,
         },
       }

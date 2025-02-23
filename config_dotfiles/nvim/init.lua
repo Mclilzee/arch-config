@@ -8,10 +8,10 @@ if not vim.uv.fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
+require('lazy').setup {
   spec = {
     { import = 'config' },
     { import = 'plugins' },
   },
   change_detection = { notify = false },
-})
+}
