@@ -10,13 +10,13 @@ set ignorecase
 set smartcase
 set gdefault
 set clipboard=unnamedplus
+set visualbell
+set noerrorbells
 set guicursor=n-v-c-sm:block,i-ci-ve:block
-set which-key
 
 " Keymap
 let mapleader = ","
-map <leader>sl :noh<CR>
-map <leader><Space> :tabprev<CR>
+map <leader><Space> <action>(RecentLocations)
 map gc <action>(CommentByLineComment)
 nmap <Esc> :nohlsearch<CR>
 nmap <C-h> <C-w><C-h>
@@ -25,24 +25,29 @@ nmap <C-j> <C-w><C-j>
 nmap <C-k> <C-w><C-k>
 
 " Window splits
-map <leader>wv <Action>(SplitVertically)
-map <leader>ws <Action>(SplitHorizontally)
+map <leader>wl <Action>(SplitVertically)
+map <leader>wj <Action>(SplitHorizontally)
 
 " Display options
 map <leader>dd <action>(ToggleDistractionFreeMode)
 map <leader>df <action>(ToggleFullScreen)
 
-
 " File navigation
-remap <leader><leader> <action>(SearchEverywhere)
+map <leader>sa <action>(SearchEverywhere)
+map <leader>sA <action>(GotoAction)
+map <leader>sn <Action>(ShowNavBar)
 map <leader>sf <action>(GotoFile)
 map <leader>sr <action>(RecentFiles)
-map <leader>fc <action>(FindInPath)
+map <leader>sg <action>(TextSearchAction)
+map <leader>sc <action>(GotoClass)
+map <leader>ss <action>(GotoSymbol)
 map <leader>nf <action>(NewScratchFile)
+map <leader><leader> <action>(RecentLocations)
 
 " Refactoring
+map <leader>o <Action>(SelectAllOccurrences)
+map <leader>f <Action>(ReformatCode)
 map <leader>ca <Action>(ShowIntentionActions)
-nmap <leader>cf <Action>(ReformatCode)
 map <leader>cr <Action>(RenameElement)
 map <leader>ce <Action>(ExtractMethod)
 map <leader>ci <Action>(IntroduceVariable)
@@ -93,40 +98,27 @@ nmap <leader>mw <Action>(ToolWindowsGroup)
 
 nmap <leader>sh <Action>(LocalHistory.ShowHistory)
 nmap <leader>si <Action>(SelectIn)
-nmap <leader>fp <Action>(FindInPath)
 nmap <leader>rp <Action>(ReplaceInPath)
 nmap <leader>sw <Action>(SearchWeb)
 
 " code
-nmap <leader>so <Action>(SelectAllOccurrences)
 
-nmap [b <Action>(PreviousTab)
-nmap ]b <Action>(NextTab)
-map [[ <Action>(GotoPrevElementUnderCaretUsage)
+nmap <Tab>h <Action>(PreviousTab)
+nmap <Tab>l <Action>(NextTab)
+nmap [[ <Action>(GotoPrevElementUnderCaretUsage)
 nmap ]] <Action>(GotoNextElementUnderCaretUsage)
 
 " goto
-nmap <leader>a <Action>(GotoAction)
-nmap ga <Action>(GotoAction)
-nmap gc <Action>(GotoClass)
-nmap gf <Action>(GotoFile)
-nmap gs <Action>(GotoSymbol)
 nmap gt <Action>(GotoTest)
-nmap gT <Action>(TextSearchAction)
 nmap go <Action>(GotoSuperMethod)
 nmap gd <Action>(GotoDeclaration)
 nmap gD <Action>(GotoTypeDeclaration)
 nmap gi <Action>(GotoImplementation)
 nmap gI <Action>(QuickImplementations)
-nmap gn <Action>(ShowNavBar)
-
-" terminal
-" nmap <leader>t <Action>(ActivateTerminal)
-nmap <leader>t <Action>(OpenTerminal)
 
 " todo
-nmap <leader>x <Action>(DeactivateTODOToolWindow)
-nmap <leader>x <Action>(ActivateTODOToolWindow)
+nmap <Tab>x <Action>(DeactivateTODOToolWindow)
+nmap <Tab>x <Action>(ActivateTODOToolWindow)
 
 " highlight yank (bundle plugin)
 set highlightedyank
@@ -137,15 +129,8 @@ let g:highlightedyank_highlight_color = "rgba(57, 197, 255, 155)"
 xnoremap < <gv
 xnoremap > >gv
 
+vmap J :m '>+1<CR>gv=gv
+vmap K :m '<-2<CR>gv=gv
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
-
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
-
-"map <leader>d to start debug
-"map <leader>d <Action>(Debug)
-
-"Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
