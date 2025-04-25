@@ -14,11 +14,17 @@ set visualbell
 set noerrorbells
 set guicursor=n-v-c-sm:block,i-ci-ve:block
 
+" ideavim settings
+set ideajoin
+set ideamarks
+set idearefactormode=normal
+set ideastatusicon=gray
+
 " Keymap
 let mapleader = ","
 map <leader><Space> <action>(RecentLocations)
 map gc <action>(CommentByLineComment)
-nmap <Esc> :nohlsearch<CR>
+nmap <Esc> :nohlsearch<CR><action>(HideActiveWindow)
 nmap <C-h> <C-w><C-h>
 nmap <C-l> <C-w><C-l>
 nmap <C-j> <C-w><C-j>
@@ -44,6 +50,7 @@ map <leader>ss <action>(GotoSymbol)
 map <leader>nf <action>(NewScratchFile)
 map <leader><leader> <action>(RecentLocations)
 map <leader>t <action>(ActivateTerminalToolWindow)
+map <leader>e <action>(ActivateProjectToolWindow)
 
 " Refactoring
 map <leader>o <Action>(SelectAllOccurrences)
@@ -55,21 +62,15 @@ map <leader>ci <Action>(IntroduceVariable)
 map <leader>cF <Action>(IntroduceField)
 map <leader>cs <Action>(ChangeSignature)
 map <leader>ch <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>cu <Action>(ShowUsages)
 
 " Go to code
 nmap <leader>gd <Action>(GotoDeclaration)
 nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
-nmap <leader>gu <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
-
-" ideavim settings
-set ideajoin
-set ideamarks
-set idearefactormode=normal
-set ideastatusicon=gray
 
 " buffer (buffer < window < tab)
 nmap <leader>bc <Action>(CloseContent)
