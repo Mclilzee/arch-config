@@ -48,9 +48,9 @@ map <leader>sg <action>(TextSearchAction)
 map <leader>sc <action>(GotoClass)
 map <leader>ss <action>(GotoSymbol)
 map <leader>nf <action>(NewScratchFile)
-map <leader><leader> <action>(RecentLocations)
 map <leader>t <action>(ActivateTerminalToolWindow)
 map <leader>e <action>(ActivateProjectToolWindow)
+map <leader><leader> <action>(ActivateStructureToolWindow)
 
 " Refactoring
 map <leader>o <Action>(SelectAllOccurrences)
