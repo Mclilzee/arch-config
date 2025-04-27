@@ -93,7 +93,7 @@ input "14538:4145:MOSART_Semi._2.4G_Wireless_Mouse" {
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+y kill
+    bindsym $mod+k kill
 
     # Start your launcher
     bindsym $mod+o exec $menu
