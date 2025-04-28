@@ -14,4 +14,11 @@ size = 12
 family = "JetBrainsMonoNerdFontMono"
 
 [window]
+option_as_alt = "OnlyLeft"
 # opacity = 0.85
+
+[scrolling]
+history = 100000
+
+[selection]
+save_to_clipboard = true
