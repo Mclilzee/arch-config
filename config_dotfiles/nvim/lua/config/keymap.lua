@@ -1,13 +1,14 @@
 -- Overwrite defaults
 vim.g.mapleader = ','
 vim.g.maplocalleader = ','
+vim.keymap.set('n', '<space>', ',', { desc = 'Move Search forward' })
+vim.keymap.set('x', '<space>', ',', { desc = 'Move Search forward' })
+
 vim.g.have_nerd_font = true
 vim.keymap.set('n', '!', ':!')
 vim.keymap.set('n', 'Q', '<nop>')
-vim.keymap.set('n', 's', '<nop>')
-vim.keymap.set('n', '<space>', ',', { desc = 'Move Search forward' })
 -- Files and windows
-vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR><cmd>set relativenumber<CR>', { desc = 'Open files tree' })
+vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>', { desc = 'Open files tree' })
 vim.keymap.set('n', '<leader>wo', '<C-w>o', { desc = 'Only current window' })
 vim.keymap.set('n', '<leader>wl', '<C-w>v', { desc = 'Split window vertically' })
 vim.keymap.set('n', '<leader>wj', '<C-w>s', { desc = 'Split window horisontally' })
@@ -24,7 +25,7 @@ vim.keymap.set('n', '<C-Right>', '<cmd>vertical resize +2<cr>', { desc = 'Increa
 -- Clipboard
 vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste While Holding Clipboard' })
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete While Holding Clipboard' })
--- Move selected up and down
+-- Move selected up and dowe
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move Selected Up' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move Selected Down' })
 -- Go to other buffer
