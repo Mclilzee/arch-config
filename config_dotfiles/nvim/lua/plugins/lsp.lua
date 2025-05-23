@@ -12,19 +12,20 @@ local servers_configs = {
 
 local ensure_installed = vim.tbl_keys(servers_configs or {})
 vim.list_extend(ensure_installed, {
-  'clangd',
-  'lua_ls',
-  'rust_analyzer',
-  'ts_ls',
   'bashls',
+  'clangd',
   'cssls',
   'html',
   'intelephense',
+  'jsonls',
+  'lua_ls',
+  'rust_analyzer',
+  'ts_ls',
 })
 
 return {
   { 'neovim/nvim-lspconfig' },
-  { 'j-hui/fidget.nvim',    opts = {} },
+  { 'j-hui/fidget.nvim', opts = {} },
   {
     'williamboman/mason.nvim',
     opts = {
