@@ -11,10 +11,26 @@ return {
           folds = false,
         },
       }
-      vim.cmd.colorscheme 'gruvbox'
+      -- vim.cmd.colorscheme 'gruvbox'
     end,
   },
   {
+    'folke/tokyonight.nvim',
+    priority = 1000,
+    config = function()
+      require('tokyonight').setup {
+        transparent = true,
+        styles = {
+          sidebars = 'transparent',
+          floats = 'transapernt',
+          comments = { italic = false },
+        },
+      }
+      vim.cmd.colorscheme 'tokyonight-night'
+    end,
+  },
+  {
+
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     opts = {
