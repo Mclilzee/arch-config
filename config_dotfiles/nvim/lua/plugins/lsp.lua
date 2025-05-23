@@ -24,7 +24,7 @@ vim.list_extend(ensure_installed, {
 
 return {
   { 'neovim/nvim-lspconfig' },
-  { 'j-hui/fidget.nvim', opts = {} },
+  { 'j-hui/fidget.nvim',    opts = {} },
   {
     'williamboman/mason.nvim',
     opts = {
@@ -42,9 +42,9 @@ return {
           function(server_name)
             local server = servers_configs[server_name] or {}
             server.on_attach = function()
-              vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })
-              vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
-              vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
+              vim.keymap.set({ 'n', 'v' }, '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })
+              vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
+              vim.keymap.set({ 'n', 'v' }, '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
               vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
             end
             server.single_file_support = false
