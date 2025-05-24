@@ -21,8 +21,6 @@ return {
       require('tokyonight').setup {
         transparent = true,
         styles = {
-          sidebars = 'transparent',
-          floats = 'transapernt',
           comments = { italic = false },
         },
       }
