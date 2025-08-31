@@ -29,7 +29,7 @@ let g:fzf_action = {
 	\ 'ctrl-v': 'vsplit' }
 
 "  Map out leader key and disable default keys
-let mapleader = " "
+let mapleader = ","
 nnoremap <space> <nop>
 nmap Q <nop>
 nmap ! :!
