@@ -17,6 +17,6 @@ composer/
 Code - OSS
 gtk-2.0/gtkfilechooser.ini
 menus/
-vim/pack/**
-vim/.netrwhist
+config_dotfiles/vim/.netrwhist
+config_dotfiles/vim/pack
 config_dotfiles/nvim/lazy-lock.json

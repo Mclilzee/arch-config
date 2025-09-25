@@ -15,4 +15,15 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufRead' }, {
   end,
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function(ev)
+    vim.lsp.start {
+      name = 'toplsp',
+      cmd = { 'node', '/home/mclil/repo/toplsp/server/out/main.js' },
+      root_dir = vim.fs.root(ev.buf, { '.markdownlint-cli2.jsonc'}),
+    }
+  end,
+})
+
 return {}
