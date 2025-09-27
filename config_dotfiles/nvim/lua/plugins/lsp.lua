@@ -10,7 +10,6 @@ local servers_configs = {
   },
 }
 
-local auto_install = vim.tbl_keys(servers_configs or {})
 vim.list_extend(servers_configs, {
   'bashls',
   'clangd',
@@ -22,6 +21,7 @@ vim.list_extend(servers_configs, {
   'rust_analyzer',
   'ts_ls',
   'stylua',
+  'markdownlint',
 })
 
 return {
@@ -33,7 +33,7 @@ return {
     { 'j-hui/fidget.nvim', opts = {} },
   },
   config = function()
-    require('mason-tool-installer').setup { ensure_installed = auto_install }
+    require('mason-tool-installer').setup { ensure_installed = servers_configs }
     require('mason-lspconfig').setup {
       ensure_installed = {},
       automatic_installation = false,
@@ -43,6 +43,12 @@ return {
           require('lspconfig')[server_name].setup(server)
         end,
       },
+    }
+    vim.diagnostic.config {
+      virtual_text = false,
+      underline = false,
+      signs = false,
+      float = false,
     }
   end,
 }

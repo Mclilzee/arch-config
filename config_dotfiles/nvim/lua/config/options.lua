@@ -1,4 +1,5 @@
 vim.opt.path = '.,,**'
+vim.opt.relativenumber = true
 vim.opt.wildmode = 'full:lastused'
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
@@ -20,17 +21,17 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.list = true
-vim.diagnostic.config {
-  virtual_text = {
-    source = true,
-  },
-  underline = {
-    severity = vim.diagnostic.severity.ERROR,
-  },
-  signs = {},
-  float = {
-    source = true,
-  },
-}
+-- vim.diagnostic.config {
+--   virtual_text = {
+--     source = true,
+--   },
+--   underline = {
+--     severity = vim.diagnostic.severity.ERROR,
+--   },
+--   signs = {},
+--   float = {
+--     source = true,
+--   },
+-- }
 
 return {}
