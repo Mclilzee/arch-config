@@ -10,8 +10,8 @@ local servers_configs = {
   },
 }
 
-local ensure_installed = vim.tbl_keys(servers_configs or {})
-vim.list_extend(ensure_installed, {
+local auto_install = vim.tbl_keys(servers_configs or {})
+vim.list_extend(servers_configs, {
   'bashls',
   'clangd',
   'cssls',
@@ -21,38 +21,28 @@ vim.list_extend(ensure_installed, {
   'lua_ls',
   'rust_analyzer',
   'ts_ls',
+  'stylua',
 })
 
 return {
-  { 'neovim/nvim-lspconfig' },
-  { 'j-hui/fidget.nvim', opts = {} },
-  {
-    'mason-org/mason.nvim',
-    opts = {
-      ensure_installed = {
-        'stylua',
-      },
-    },
-  },
-  {
+  'neovim/nvim-lspconfig',
+  dependencies = {
+    { 'mason-org/mason.nvim', opts = {} },
     'mason-org/mason-lspconfig.nvim',
-    config = function()
-      require('mason-lspconfig').setup {
-        ensure_installed = ensure_installed,
-        handlers = {
-          function(server_name)
-            local server = servers_configs[server_name] or {}
-            server.on_attach = function()
-              vim.keymap.set({ 'n', 'v' }, '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename' })
-              vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
-              vim.keymap.set({ 'n', 'v' }, '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
-              vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
-            end
-            server.single_file_support = false
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
-      }
-    end,
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    { 'j-hui/fidget.nvim', opts = {} },
   },
+  config = function()
+    require('mason-tool-installer').setup { ensure_installed = auto_install }
+    require('mason-lspconfig').setup {
+      ensure_installed = {},
+      automatic_installation = false,
+      handlers = {
+        function(server_name)
+          local server = servers_configs[server_name] or {}
+          require('lspconfig')[server_name].setup(server)
+        end,
+      },
+    }
+  end,
 }
