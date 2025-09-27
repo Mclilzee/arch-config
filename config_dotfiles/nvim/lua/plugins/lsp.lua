@@ -3,7 +3,7 @@ local servers_configs = {
     settings = {
       ['rust-analyzer'] = {
         checkOnSave = {
-          command = 'clippy',
+          -- command = 'clippy',
         },
       },
     },
@@ -27,7 +27,7 @@ return {
   { 'neovim/nvim-lspconfig' },
   { 'j-hui/fidget.nvim', opts = {} },
   {
-    'williamboman/mason.nvim',
+    'mason-org/mason.nvim',
     opts = {
       ensure_installed = {
         'stylua',
@@ -35,7 +35,7 @@ return {
     },
   },
   {
-    'williamboman/mason-lspconfig.nvim',
+    'mason-org/mason-lspconfig.nvim',
     config = function()
       require('mason-lspconfig').setup {
         ensure_installed = ensure_installed,
