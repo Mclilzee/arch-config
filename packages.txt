@@ -90,3 +90,5 @@ zsh-syntax-highlighting
 net-tools
 bc
 usbutils
+feh
+krita
