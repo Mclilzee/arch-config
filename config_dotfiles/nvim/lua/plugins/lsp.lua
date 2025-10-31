@@ -1,12 +1,6 @@
 local servers_configs = {
   rust_analyzer = {
-    settings = {
-      ['rust-analyzer'] = {
-        checkOnSave = {
-          -- command = 'clippy',
-        },
-      },
-    },
+    checkOnSave = false,
   },
 }
 
@@ -18,7 +12,6 @@ vim.list_extend(servers_configs, {
   'intelephense',
   'jsonls',
   'lua_ls',
-  'rust_analyzer',
   'ts_ls',
   'stylua',
   'markdownlint',
@@ -47,6 +40,7 @@ return {
     vim.diagnostic.config {
       virtual_text = false,
       underline = false,
+      undercurl = false,
       signs = false,
       float = false,
     }

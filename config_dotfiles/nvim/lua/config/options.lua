@@ -21,17 +21,5 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.list = true
--- vim.diagnostic.config {
---   virtual_text = {
---     source = true,
---   },
---   underline = {
---     severity = vim.diagnostic.severity.ERROR,
---   },
---   signs = {},
---   float = {
---     source = true,
---   },
--- }
 
 return {}

@@ -20,8 +20,10 @@ return {
     config = function()
       require('tokyonight').setup {
         transparent = true,
+        style = 'dark',
         styles = {
           comments = { italic = false },
+          keywords = { italic = false },
         },
       }
       vim.cmd.colorscheme 'tokyonight-night'
