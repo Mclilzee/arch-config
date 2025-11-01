@@ -92,3 +92,4 @@ bc
 usbutils
 feh
 krita
+mpv
