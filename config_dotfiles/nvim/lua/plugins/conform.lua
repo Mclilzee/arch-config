@@ -15,6 +15,8 @@ return {
       -- notify_on_error = false,
       format_on_save = false,
       formatters_by_ft = {
+        c = { 'clang-format' },
+        cpp = { 'clang-format' },
         lua = { 'stylua' },
         python = { 'isort', 'black' },
         rust = { 'rustfmt', lsp_format = 'fallback' },
