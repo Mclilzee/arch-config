@@ -11,7 +11,5 @@ done
 [[ -f "$temp_dir" ]] && deg="$(($(<"$temp_dir") * 100 / 10000))"
 
 deg="${deg//./}"
-
-# Format the output
-deg="${deg/${deg: -1}/}.${deg: -1}"
+deg="${deg/${deg: -1}/}"
 echo "$deg"

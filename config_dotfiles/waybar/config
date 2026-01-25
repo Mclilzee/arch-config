@@ -142,10 +142,10 @@
         "disable-scroll": true,
         "format": "{icon}",
         "format-icons": {
-            "1": "", // Icon: terminal
-            "2": "", // Icon: firefox-browser
-            "3": "󰙯", // Icon: discord
-            "4": "", // Icon: mail
+            "1": "",
+            "2": "",
+            "3": "󰙯",
+            "4": "",
 //            "urgent": "{icon}",
 //            "focused": "",
             "default": ""
@@ -167,16 +167,16 @@
     },
 
     "custom/temperature": {
-      "format": "{icon} {}°C",
+      "format": "{}°C",
       "interval": 5,
       "exec": "$HOME/.config/waybar/bin/cpu-temp.sh",
-      "critical-threshold": 80,
+      "critical-threshold": 100,
       "format-icons": [
-          "", // Icon: temperature-empty
-          "", // Icon: temperature-quarter
-          "", // Icon: temperature-half
-          "", // Icon: temperature-three-quarters
-          ""  // Icon: temperature-full
+          "",
+          "",
+          "",
+          "",
+          ""
       ],
       "tooltip": false,
     },
