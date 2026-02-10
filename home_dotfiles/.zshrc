@@ -38,7 +38,7 @@ alias ps="procs"
 alias mv="mv -v"
 alias hd="hexdump"
 alias grep="grep --color=always"
-alias adapter_mode="sudo sb_modeswitch -K -v 0bda -p 1a2b"
+alias adapter_mode="sudo usb_modeswitch -K -v 0bda -p 1a2b"
 alias hist="history 0 | fzf"
 
 gif() {
