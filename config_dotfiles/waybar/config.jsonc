@@ -1,0 +1,139 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "height": 30,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "cpu",
+        "memory",
+        "temperature",
+        "battery"
+    ],
+    "modules-center": [
+        "image#archicon"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "keyboard-state",
+        "clock#date",
+        "clock#time"
+    ],
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format-charging": " {icon}  {capacity}%",
+        "format-full": " {capacity}%",
+        "format-discharging": "{icon}  {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": true
+    },
+    "clock#time": {
+        "interval": 10,
+        "format": " {:%H:%M}",
+        "tooltip": false
+    },
+    "clock#date": {
+        "format": "  {:%e %b %Y} ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click": "mode",
+        }
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    "memory": {
+        "interval": 5,
+        "format": "  {used:0.1f}G",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "tooltip-format": "{}%",
+    },
+    "network": {
+        "interval": 5,
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀  {ifname}",
+        "format-disconnected": "󰌙  Disconnected",
+        "format-disabled": "󰌙  Disabled",
+        "tooltip-format": "{ifname}: {ipaddr} {signalStrength}%",
+        "tooltip-format-wifi": "{ifname}: {ipaddr} ({signalStrength}%)",
+    },
+    "sway/mode": {
+        "format": "  Resize",
+        "tooltip": false
+    },
+    "image#archicon": {
+        // "path": "./icons/archicon.png",
+        "size": 20
+    },
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "󰙯",
+            "4": "",
+            "default": ""
+        }
+    },
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "headphones": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    }
+}

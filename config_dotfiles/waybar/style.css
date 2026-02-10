@@ -61,11 +61,11 @@ window#waybar {
 #mode,
 #cpu,
 #memory,
-#custom-temperature,
+#temperature,
 #battery,
 #pulseaudio,
 #network,
-#custom-keyboard-layout,
+#keyboard-state,
 #clock {
   padding: 0px 10px;
 }
@@ -73,7 +73,7 @@ window#waybar {
 #mode,
 #cpu,
 #memory,
-#custom-temperature,
+#temperature,
 #battery {
   border-right: solid 3px rgba(0, 200, 255, 0.5);
   border-top-right-radius: 15px;
@@ -82,7 +82,7 @@ window#waybar {
 
 #pulseaudio,
 #network,
-#custom-keyboard-layout,
+#keyboard-state,
 #clock {
   border-left: solid 3px rgba(0, 200, 255, 0.5);
   border-top-left-radius: 15px;
@@ -177,7 +177,7 @@ window#waybar {
 /* #custom-temperature { */
 /* } */
 
-#custom-temperature.critical {
+#temperature.critical {
   color: red;
 }
 
