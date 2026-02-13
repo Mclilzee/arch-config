@@ -11,10 +11,15 @@ set fish_color_command green
 bind tab accept-autosuggestion
 bind -M insert tab accept-autosuggestion
 
-bind -M insert ctrl-p up-or-search
-bind -M insert ctrl-n down-or-search
+bind -M insert alt-p 'prevd > /dev/null; commandline -f repaint'
+bind alt-p 'prevd > /dev/null; commandline -f repaint'
+bind -M insert alt-n 'nextd > /dev/null; commandline -f repaint'
+bind alt-n 'nextd > /dev/null; commandline -f repaint'
+
 bind ctrl-p up-or-search
 bind ctrl-n down-or-search
+bind -M insert ctrl-p up-or-search
+bind -M insert ctrl-n down-or-search
 
 abbr -a lock 'swaylock -f -c 000000'
 abbr -a savepk 'pacman -Qttenq > ~/.config/packages.txt'
