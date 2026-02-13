@@ -3,14 +3,16 @@ if status is-interactive
 end
 set -gx PATH $HOME/.cargo/bin/ $HOME/.bun/bin/ $HOME/.rbenv/versions/3.2.2/bin/ $HOME/.local/share/Steam/steamapps/common/Aseprite $PATH
 
-# complete
-# complete-and-search
-
 fish_vi_key_bindings
 set fish_cursor_insert block
 
 bind tab accept-autosuggestion
 bind -M insert tab accept-autosuggestion
+
+bind -M insert ctrl-p up-or-search
+bind -M insert ctrl-n down-or-search
+bind ctrl-p up-or-search
+bind ctrl-n down-or-search
 
 abbr -a lock 'swaylock -f -c 000000'
 abbr -a savepk 'pacman -Qttenq > ~/.config/packages.txt'
