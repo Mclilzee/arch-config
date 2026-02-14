@@ -47,9 +47,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>cr', vim.lsp.buf.rename, { desc = 'Rename'
 vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'Action' })
 vim.keymap.set({ 'n', 'v' }, '<leader>cd', vim.diagnostic.open_float, { desc = 'Diagnostic' })
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = 'Goto Declaration' })
--- Terminal
-vim.keymap.set('n', '<leader>t', '<cmd>term<CR>i', { desc = 'Terminal' })
-vim.keymap.set('n', '<leader>.', '<cmd>!!<CR>', { desc = 'Repeat last shell command' })
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
@@ -60,5 +57,14 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 vim.keymap.set('n', '<leader>m', '<cmd>messages<cr>', { desc = 'Show messages' })
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+
+-- Terminal
+vim.keymap.set('n', '<leader>t', function()
+  vim.fn.system 'tmux split-window -v'
+end, { desc = 'Open terminal in tmux split' })
+vim.keymap.set('n', '<leader>T', function()
+  vim.fn.system 'tmux split-window -h'
+end, { desc = 'Open terminal in tmux split' })
+vim.keymap.set('n', '<leader>.', '<cmd>!!<CR>', { desc = 'Repeat last shell command' })
 
 return {}
