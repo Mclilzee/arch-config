@@ -8,8 +8,10 @@ fish_vi_key_bindings
 set fish_cursor_insert block
 set fish_color_command green
 
-bind tab accept-autosuggestion
-bind -M insert tab accept-autosuggestion
+bind shift-tab accept-autosuggestion
+bind -M insert shift-tab accept-autosuggestion
+bind tab complete-and-search
+bind -M insert tab complete-and-search
 
 bind -M insert alt-p 'prevd > /dev/null; commandline -f repaint'
 bind alt-p 'prevd > /dev/null; commandline -f repaint'
