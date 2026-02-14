@@ -22,11 +22,11 @@ return {
   dependencies = {
     { 'mason-org/mason.nvim', opts = {} },
     'mason-org/mason-lspconfig.nvim',
-    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    -- 'WhoIsSethDaniel/mason-tool-installer.nvim',
     { 'j-hui/fidget.nvim', opts = {} },
   },
   config = function()
-    require('mason-tool-installer').setup { ensure_installed = servers_configs }
+    -- require('mason-tool-installer').setup { ensure_installed = servers_configs }
     require('mason-lspconfig').setup {
       ensure_installed = {},
       automatic_installation = false,
