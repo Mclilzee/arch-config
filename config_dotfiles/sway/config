@@ -138,7 +138,12 @@ input "14538:4145:MOSART_Semi._2.4G_Wireless_Mouse" {
     bindsym $mod+Shift+Right move right
 #
 # Workspaces:
-#
+
+
+    # Switch which monitor mapped to drawing tablet
+    bindsym $mod+t input "9580:103:HUION_Huion_Tablet_H951P_Pen" map_to_output DP-3
+    bindsym $mod+Shift+t input "9580:103:HUION_Huion_Tablet_H951P_Pen" map_to_output HDMI-A-1
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2

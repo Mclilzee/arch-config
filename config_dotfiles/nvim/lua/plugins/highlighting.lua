@@ -2,6 +2,8 @@ return {
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   {
     'nvim-treesitter/nvim-treesitter',
+    tag = 'v0.10.0',
+    lazy = false,
     build = ':TSUpdate',
     opts = {
       ensure_installed = {
@@ -37,9 +39,5 @@ return {
       },
       indent = { enable = true, disable = { 'ruby' } },
     },
-    config = function(_, opts)
-      ---@diagnostic disable-next-line: missing-fields
-      require('nvim-treesitter.config').setup(opts)
-    end,
   },
 }
