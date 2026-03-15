@@ -93,3 +93,4 @@ usbutils
 feh
 krita
 mpv
+openssh
