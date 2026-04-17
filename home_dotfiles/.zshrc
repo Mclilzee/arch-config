@@ -73,3 +73,5 @@ bindkey '^k' edit-command-line
 
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+. "$HOME/.local/bin/env"

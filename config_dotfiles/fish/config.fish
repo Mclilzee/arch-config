@@ -31,7 +31,6 @@ abbr -a ls 'lsd'
 abbr -a ps 'procs'
 abbr -a mv 'mv -v'
 abbr -a hd 'hexdump'
-abbr -a grep 'grep --color=always'
 abbr -a adapter_mode 'sudo usb_modeswitch -K -v 0bda -p 1a2b'
 abbr -a hist 'history | fzf'
 
