@@ -60,4 +60,5 @@ function record
 end
 
 # ---- Editor and keybindings ----
-set -gx EDITOR nvim
+set -x EDITOR nvim
+# set -x MANPAGER 'bat -p -l man'
