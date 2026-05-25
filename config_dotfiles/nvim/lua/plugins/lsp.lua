@@ -38,11 +38,11 @@ return {
       },
     }
     vim.diagnostic.config {
-      virtual_text = false,
-      underline = false,
-      undercurl = false,
-      signs = false,
-      float = false,
+      -- virtual_text = false,
+      -- underline = false,
+      -- undercurl = false,
+      -- signs = false,
+      -- float = false,
     }
   end,
 }

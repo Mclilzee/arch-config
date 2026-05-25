@@ -20,8 +20,8 @@ vim.api.nvim_create_autocmd('FileType', {
   callback = function(ev)
     vim.lsp.start {
       name = 'toplsp',
-      cmd = { 'node', '/home/mclil/repo/toplsp/server/out/main.js' },
-      root_dir = vim.fs.root(ev.buf, { '.markdownlint-cli2.jsonc'}),
+      cmd = { 'node', '/home/mclilzee/repo/toplsp/server/out/main.js' },
+      root_dir = vim.fs.root(ev.buf, { '.markdownlint-cli2.jsonc' }),
     }
   end,
 })
