@@ -2,6 +2,7 @@ return {
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
     tag = 'v0.10.0',
     lazy = false,
     build = ':TSUpdate',
