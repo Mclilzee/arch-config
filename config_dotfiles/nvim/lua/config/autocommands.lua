@@ -1,6 +1,6 @@
 vim.cmd 'autocmd TextYankPost * silent! lua vim.highlight.on_yank { clear = true }'
 
-vim.api.nvim_create_autocmd('FileType', {
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufRead' }, {
   pattern = '*',
   callback = function()
     vim.opt.formatoptions:remove { 'r', 'o', 'c' }

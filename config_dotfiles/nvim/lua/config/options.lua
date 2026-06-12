@@ -23,7 +23,7 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.list = true
-vim.o.winborder = "rounded"
+vim.o.winborder = 'rounded'
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.diagnostic.config {
   -- virtual_text = false,
@@ -32,3 +32,6 @@ vim.diagnostic.config {
   -- signs = false,
   -- float = false,
 }
+
+--- Netrw
+vim.g.netrw_liststyle = 1
