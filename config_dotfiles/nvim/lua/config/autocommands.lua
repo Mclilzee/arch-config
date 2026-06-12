@@ -1,4 +1,4 @@
-vim.cmd 'autocmd TextYankPost * silent! lua vim.highlight.on_yank { clear = true}'
+vim.cmd 'autocmd TextYankPost * silent! lua vim.highlight.on_yank { clear = true }'
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = '*',
@@ -8,15 +8,16 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-vim.api.nvim_create_autocmd({ 'BufEnter', 'BufRead' }, {
-  pattern = { '*.html', '*.css', '*.js', '*.ts', '*.lua' },
-  callback = function()
-    vim.opt.shiftwidth = 2
-  end,
-})
+-- vim.api.nvim_create_autocmd({ 'BufEnter', 'BufRead' }, {
+--   pattern = { '*.html', '*.css', '*.js', '*.ts', '*.lua' },
+--   callback = function()
+--     vim.opt.shiftwidth = 2
+--   end,
+-- })
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'markdown',
+-- 'FileType'
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufRead' }, {
+  pattern = '*.md',
   callback = function(ev)
     vim.lsp.start {
       name = 'toplsp',
@@ -25,5 +26,3 @@ vim.api.nvim_create_autocmd('FileType', {
     }
   end,
 })
-
-return {}

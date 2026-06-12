@@ -1,10 +1,57 @@
-local servers_configs = {
+vim.pack.add { 'https://github.com/j-hui/fidget.nvim' }
+require('fidget').setup {}
+
+local servers = {
+  stylua = {},
+  lua_ls = {
+    on_init = function(client)
+      client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)
+
+      if client.workspace_folders then
+        local path = client.workspace_folders[1].name
+        if path ~= vim.fn.stdpath 'config' and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc')) then
+          return
+        end
+      end
+
+      client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+        runtime = {
+          version = 'LuaJIT',
+          path = { 'lua/?.lua', 'lua/?/init.lua' },
+        },
+        workspace = {
+          checkThirdParty = false,
+          -- NOTE: this is a lot slower and will cause issues when working on your own configuration.
+          --  See https://github.com/neovim/nvim-lspconfig/issues/3189
+          library = vim.tbl_extend('force', vim.api.nvim_get_runtime_file('', true), {
+            '${3rd}/luv/library',
+            '${3rd}/busted/library',
+          }),
+        },
+      })
+    end,
+    settings = {
+      Lua = {
+        format = { enable = false }, -- Disable formatting (formatting is done by stylua)
+      },
+    },
+  },
+
   rust_analyzer = {
-    checkOnSave = false,
+    checkOnSave = true,
   },
 }
 
-vim.list_extend(servers_configs, {
+vim.pack.add {
+  'https://github.com/neovim/nvim-lspconfig',
+  'https://github.com/mason-org/mason.nvim',
+  'https://github.com/mason-org/mason-lspconfig.nvim',
+  'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim',
+}
+require('mason').setup {}
+
+local ensure_installed = vim.tbl_keys(servers or {})
+vim.list_extend(ensure_installed, {
   'bashls',
   'clangd',
   'cssls',
@@ -15,34 +62,13 @@ vim.list_extend(servers_configs, {
   'ts_ls',
   'stylua',
   'markdownlint',
+  'eslint_d',
+  'jsonlint',
+  'prettierd',
 })
 
-return {
-  'neovim/nvim-lspconfig',
-  dependencies = {
-    { 'mason-org/mason.nvim', opts = {} },
-    'mason-org/mason-lspconfig.nvim',
-    -- 'WhoIsSethDaniel/mason-tool-installer.nvim',
-    { 'j-hui/fidget.nvim', opts = {} },
-  },
-  config = function()
-    -- require('mason-tool-installer').setup { ensure_installed = servers_configs }
-    require('mason-lspconfig').setup {
-      ensure_installed = {},
-      automatic_installation = false,
-      handlers = {
-        function(server_name)
-          local server = servers_configs[server_name] or {}
-          require('lspconfig')[server_name].setup(server)
-        end,
-      },
-    }
-    vim.diagnostic.config {
-      -- virtual_text = false,
-      -- underline = false,
-      -- undercurl = false,
-      -- signs = false,
-      -- float = false,
-    }
-  end,
-}
+require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+for name, server in pairs(servers) do
+  vim.lsp.config(name, server)
+  vim.lsp.enable(name)
+end
