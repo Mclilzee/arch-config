@@ -24,7 +24,7 @@ set ideastatusicon=gray
 let mapleader = ","
 map <leader><Space> <action>(RecentLocations)
 map gc <action>(CommentByLineComment)
-nmap <Esc> :nohlsearch<CR><action>(HideActiveWindow)
+nmap <Esc> :nohlsearch<CR>
 nmap <C-h> <C-w><C-h>
 nmap <C-l> <C-w><C-l>
 nmap <C-j> <C-w><C-j>
@@ -70,15 +70,7 @@ map <leader>ci <action>(Inline)
 map <leader>cF <Action>(IntroduceField)
 map <leader>cs <Action>(ChangeSignature)
 map <leader>ch <Action>(Refactorings.QuickListPopupAction)
-nmap <leader>cu <Action>(ShowUsages)
-
-" Go to code
-nmap <leader>gd <Action>(GotoDeclaration)
-nmap <leader>gy <Action>(GotoTypeDeclaration)
-nmap <leader>gi <Action>(GotoImplementation)
-nmap <leader>gt <Action>(GotoTest)
-nmap <leader>gf <Action>(Back)
-nmap <leader>gb <Action>(Forward)
+nmap <leader>cE <Action>(EncapsulateFields)
 
 " buffer (buffer < window < tab)
 nmap <leader>bc <Action>(CloseContent)
@@ -119,6 +111,7 @@ nmap [[ <Action>(GotoPrevElementUnderCaretUsage)
 nmap ]] <Action>(GotoNextElementUnderCaretUsage)
 
 " goto
+nmap gr <Action>(ShowUsages)
 nmap gt <Action>(GotoTest)
 nmap go <Action>(GotoSuperMethod)
 nmap gd <Action>(GotoDeclaration)
