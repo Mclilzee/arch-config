@@ -11,6 +11,7 @@ vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>', { desc = 'Open files tree' })
 vim.keymap.set('n', '<leader>wo', '<C-w>o', { desc = 'Only current window' })
 vim.keymap.set('n', '<leader>wl', '<C-w>v', { desc = 'Split window vertically' })
 vim.keymap.set('n', '<leader>wj', '<C-w>s', { desc = 'Split window horisontally' })
+vim.keymap.set('n', '<leader>.', ':new | setlocal buftype=nofile bufhidden=wipe noswapfile | 0read! ', { desc = 'Open command buffer' })
 -- Use CTRL+<hjkl> to switch between windows
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
@@ -67,7 +68,6 @@ end, { desc = 'Open terminal in tmux split' })
 vim.keymap.set('n', '<leader>T', function()
   vim.fn.system 'tmux split-window -h'
 end, { desc = 'Open terminal in tmux split' })
-vim.keymap.set('n', '<leader>.', '<cmd>!!<CR>', { desc = 'Repeat last shell command' })
 
 ----------------- Tree sitter -------------------
 local builtin = require 'telescope.builtin'

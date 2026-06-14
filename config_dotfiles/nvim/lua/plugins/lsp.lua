@@ -63,6 +63,7 @@ vim.list_extend(ensure_installed, {
   'stylua',
   'markdownlint',
   'eslint_d',
+  'eslint',
   'jsonlint',
   'prettierd',
 })
