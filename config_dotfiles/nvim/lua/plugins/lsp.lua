@@ -48,7 +48,9 @@ vim.pack.add {
   'https://github.com/mason-org/mason-lspconfig.nvim',
   'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim',
 }
+
 require('mason').setup {}
+require('mason-lspconfig').setup {}
 
 local ensure_installed = vim.tbl_keys(servers or {})
 vim.list_extend(ensure_installed, {
@@ -56,12 +58,10 @@ vim.list_extend(ensure_installed, {
   'clangd',
   'cssls',
   'html',
-  'intelephense',
   'jsonls',
   'lua_ls',
   'ts_ls',
   'stylua',
-  'markdownlint',
   'eslint_d',
   'eslint',
   'jsonlint',
