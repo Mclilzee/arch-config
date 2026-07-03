@@ -48,7 +48,6 @@ vim.pack.add {
   'https://github.com/mason-org/mason-lspconfig.nvim',
   'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim',
 }
-
 require('mason').setup {}
 require('mason-lspconfig').setup {}
 

@@ -17,7 +17,6 @@ vim.o.scrolloff = 10
 vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.signcolumn = 'yes'
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 vim.o.splitright = true
@@ -25,12 +24,14 @@ vim.o.splitbelow = true
 vim.o.list = true
 vim.o.winborder = 'rounded'
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- vim.o.signcolumn = 'yes'
 vim.diagnostic.config {
-  -- virtual_text = false,
-  -- underline = false,
-  -- undercurl = false,
-  -- signs = false,
-  -- float = false,
+  virtual_text = false,
+  underline = false,
+  undercurl = false,
+  signs = false,
+  float = false,
 }
 
 --- Netrw
