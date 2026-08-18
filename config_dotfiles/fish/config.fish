@@ -1,7 +1,7 @@
 if status is-interactive
 # Commands to run in interactive sessions can go here
 end
-set -gx PATH $HOME/.cargo/bin/ $HOME/.bun/bin/ $HOME/.rbenv/versions/3.2.2/bin/ $HOME/.local/share/Steam/steamapps/common/Aseprite $PATH
+set -gx PATH $HOME/.jenv/bin $HOME/.cargo/bin/ $HOME/.bun/bin/ $HOME/.rbenv/versions/3.2.2/bin/ $HOME/.local/share/Steam/steamapps/common/Aseprite $PATH
 set -U fish_greeting
 
 fish_vi_key_bindings
