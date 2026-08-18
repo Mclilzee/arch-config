@@ -18,6 +18,11 @@ bind alt-p 'prevd > /dev/null; commandline -f repaint'
 bind -M insert alt-n 'nextd > /dev/null; commandline -f repaint'
 bind alt-n 'nextd > /dev/null; commandline -f repaint'
 
+bind -M insert super-p 'prevd > /dev/null; commandline -f repaint'
+bind super-p 'prevd > /dev/null; commandline -f repaint'
+bind -M insert super-n 'nextd > /dev/null; commandline -f repaint'
+bind super-n 'nextd > /dev/null; commandline -f repaint'
+
 bind ctrl-p up-or-search
 bind ctrl-n down-or-search
 bind -M insert ctrl-p up-or-search
@@ -26,7 +31,6 @@ bind -M insert ctrl-n down-or-search
 abbr -a lock 'swaylock -f -c 000000'
 abbr -a savepk 'pacman -Qttenq > ~/.config/packages.txt'
 abbr -a cp 'cp -v'
-abbr -a fd 'fd -H'             # note: using 'fd' as the alias keeps original name
 abbr -a ls 'lsd'
 abbr -a ps 'procs'
 abbr -a mv 'mv -v'
@@ -62,3 +66,4 @@ end
 # ---- Editor and keybindings ----
 set -x EDITOR nvim
 # set -x MANPAGER 'bat -p -l man'
+status --is-interactive; and jenv init - | source
