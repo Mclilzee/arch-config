@@ -5,6 +5,7 @@ vim.keymap.set('n', '<space>', ',', { desc = 'Move Search forward' })
 vim.keymap.set('x', '<space>', ',', { desc = 'Move Search forward' })
 
 vim.keymap.set('n', '!', ':!')
+vim.keymap.set('n', 'q!', 'q:i!<Esc>')
 vim.keymap.set('n', 'Q', '<nop>')
 -- Files and windows
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>', { desc = 'Open files tree' })
