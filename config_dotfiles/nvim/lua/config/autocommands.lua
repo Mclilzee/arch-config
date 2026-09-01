@@ -16,13 +16,3 @@ vim.cmd 'autocmd TextYankPost * silent! lua vim.highlight.on_yank { clear = true
 -- })
 
 -- 'FileType'
-vim.api.nvim_create_autocmd({ 'BufEnter', 'BufRead' }, {
-  pattern = '*.md',
-  callback = function(ev)
-    vim.lsp.start {
-      name = 'toplsp',
-      cmd = { 'node', '/home/mclilzee/repo/toplsp/server/out/main.js' },
-      root_dir = vim.fs.root(ev.buf, { '.markdownlint-cli2.jsonc' }),
-    }
-  end,
-})
