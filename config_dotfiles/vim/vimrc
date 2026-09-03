@@ -1,4 +1,5 @@
 syntax on
+set path=.,,**
 set relativenumber
 set laststatus=2
 set wildmenu
@@ -16,6 +17,10 @@ set autoindent
 set clipboard=unnamed,unnamedplus
 set background=dark
 set termguicolors
+set is hls
+set splitbelow
+set ttimeoutlen=10
+set gdefault
 let g:gruvbox_transparent_bg=1
 let g:gruvbox_italicize_comments=0
 let g:gruvbox_italicize_strings=0
@@ -34,14 +39,15 @@ nnoremap <space> <nop>
 nmap Q <nop>
 nmap ! :!
 
+nmap <esc> <cmd>nohl<CR>
 nmap <leader>t :!tmux split-window -v<CR><CR>
 nmap <leader>T :!tmux split-window -h<CR><CR>
-
 map <leader>w <C-w>
 nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
+nmap <leader>e <cmd>Ex<CR>
 
 "  Move selected up and down
 vmap J <cmd>m '>+1<CR>gv=gv
@@ -56,7 +62,7 @@ nmap n nzzzv
 nmap N Nzzzv
   
 "  Go to other buffer
-nmap <leader>, <cmd>e #<CR>
+nmap <leader><space> <cmd>e #<CR>
 
 " Tabs
 nmap <tab>l <cmd>tabnext<CR>
@@ -66,5 +72,4 @@ nmap <tab>o <cmd>tabonly<CR>
 
 " Fzf finder
 nmap <leader>sf <cmd>FZF<CR>
-
 nmap q! q:i!<Esc> 
