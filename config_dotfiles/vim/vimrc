@@ -21,6 +21,7 @@ set is hls
 set splitbelow
 set ttimeoutlen=10
 set gdefault
+
 let g:gruvbox_transparent_bg=1
 let g:gruvbox_italicize_comments=0
 let g:gruvbox_italicize_strings=0
@@ -38,6 +39,10 @@ let mapleader = ","
 nnoremap <space> <nop>
 nmap Q <nop>
 nmap ! :!
+nmap ]d <cmd>cn<cr>
+nmap [d <cmd>cp<cr>
+nmap ]] <cmd>copen 30<cr>
+nmap [[ <cmd>cclose<cr>
 
 nmap <esc> <cmd>nohl<CR>
 nmap <leader>t :!tmux split-window -v<CR><CR>
@@ -62,7 +67,7 @@ nmap n nzzzv
 nmap N Nzzzv
   
 "  Go to other buffer
-nmap <leader><space> <cmd>e #<CR>
+nmap <leader>. <cmd>e #<CR>
 
 " Tabs
 nmap <tab>l <cmd>tabnext<CR>
