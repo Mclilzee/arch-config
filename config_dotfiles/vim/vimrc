@@ -13,7 +13,7 @@ set expandtab
 set shiftwidth=4
 set smartindent
 set autoindent
-
+set clipboard=unnamed,unnamedplus
 set background=dark
 set termguicolors
 let g:gruvbox_transparent_bg=1
@@ -34,9 +34,10 @@ nnoremap <space> <nop>
 nmap Q <nop>
 nmap ! :!
 
-"  Control windows and open term in new tab
+nmap <leader>t :!tmux split-window -v<CR><CR>
+nmap <leader>T :!tmux split-window -h<CR><CR>
+
 map <leader>w <C-w>
-map <leader>t <cmd>term<CR>
 nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
@@ -66,12 +67,4 @@ nmap <tab>o <cmd>tabonly<CR>
 " Fzf finder
 nmap <leader>sf <cmd>FZF<CR>
 
-"  
-"  -- LSP
-"  vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = "Restart" })
-"  vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<CR>", { desc = "Info" })
-"  vim.keymap.set("n", "<leader>ls", "<cmd>LspStart<CR>", { desc = "Start" })
-"  vim.keymap.set("n", "<leader>ll", "<cmd>LspLog<CR>", { desc = "Log" })
-"  vim.keymap.set("n", "<leader>lS", "<cmd>LspStop<CR>", { desc = "Stop" })
-"  vim.keymap.set("n", "<leader>lI", "<cmd>LspInstall<CR>", { desc = "Install" })
-"  vim.keymap.set("n", "<leader>lu", "<cmd>LspUninstall<CR>", { desc = "Uninstall" })
+nmap q! q:i!<Esc> 
