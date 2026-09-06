@@ -4,6 +4,7 @@ filetype plugin indent on
 set path=.,,**
 set undofile
 set undodir=~/.vim/undodir
+set directory=~/.vim/swap
 set number
 set relativenumber
 set laststatus=2
