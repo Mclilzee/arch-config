@@ -1,5 +1,10 @@
 syntax on
+set regexpengine=0
+filetype plugin indent on
 set path=.,,**
+set undofile
+set undodir=~/.vim/undodir
+set number
 set relativenumber
 set laststatus=2
 set wildmenu
@@ -43,6 +48,7 @@ nmap ]d <cmd>cn<cr>
 nmap [d <cmd>cp<cr>
 nmap ]] <cmd>copen 30<cr>
 nmap [[ <cmd>cclose<cr>
+nmap <leader>sr <cmd>bro old!<CR>
 
 nmap <esc> <cmd>nohl<CR>
 nmap <leader>t :!tmux split-window -v<CR><CR>
@@ -70,10 +76,6 @@ nmap N Nzzzv
 nmap <leader>. <cmd>e #<CR>
 
 " Tabs
-nmap <tab>l <cmd>tabnext<CR>
-nmap <tab>h <cmd>tabprevious<CR>
-nmap <tab>n <cmd>tab split<CR>
-nmap <tab>o <cmd>tabonly<CR>
 
 " Fzf finder
 nmap <leader>sf <cmd>FZF<CR>
