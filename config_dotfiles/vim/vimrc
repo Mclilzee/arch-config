@@ -50,6 +50,8 @@ nmap [d <cmd>cp<cr>
 nmap ]] <cmd>copen 30<cr>
 nmap [[ <cmd>cclose<cr>
 nmap <leader>sr <cmd>bro old!<CR>
+vmap / y/<C-f>p<CR>
+vmap ? y?<C-f>p<CR>
 
 nmap <esc> <cmd>nohl<CR>
 nmap <leader>t :!tmux split-window -v<CR><CR>
