@@ -18,6 +18,8 @@ set pumheight=0
 set scrolloff=8
 set expandtab
 set shiftwidth=4
+set ignorecase
+set smartcase
 set smartindent
 set autoindent
 set clipboard=unnamed,unnamedplus
@@ -45,13 +47,13 @@ let mapleader = ","
 nnoremap <space> <nop>
 nmap Q <nop>
 nmap ! :!
-nmap ]d <cmd>cn<cr>
-nmap [d <cmd>cp<cr>
-nmap ]] <cmd>copen 30<cr>
-nmap [[ <cmd>cclose<cr>
+nmap ]q <cmd>cn<cr>
+nmap [q <cmd>cp<cr>
+nmap <leader>q <cmd>copen 30<CR>
+nmap <leader>Q <cmd>cclose<CR>
 nmap <leader>sr <cmd>bro old!<CR>
-vmap / y/<C-f>p<CR>
-vmap ? y?<C-f>p<CR>
+vmap * y/<C-f>p<CR>
+vmap # y?<C-f>p<CR>
 
 nmap <esc> <cmd>nohl<CR>
 nmap <leader>t :!tmux split-window -v<CR><CR>
