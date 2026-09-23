@@ -1,7 +1,7 @@
 syntax on
 set regexpengine=0
 filetype plugin indent on
-set path=.,,**
+set path=src/**
 set undofile
 set undodir=~/.vim/undodir
 set directory=~/.vim/swap
@@ -20,7 +20,6 @@ set expandtab
 set shiftwidth=4
 set ignorecase
 set smartcase
-set smartindent
 set autoindent
 set clipboard=unnamed,unnamedplus
 set background=dark
@@ -29,12 +28,14 @@ set is hls
 set splitbelow
 set ttimeoutlen=10
 set gdefault
+let &errorformat='e:\ file://%f:%l:%c\ %m,' . &errorformat . ',%-G%.%#'
 
 let g:gruvbox_transparent_bg=1
 let g:gruvbox_italicize_comments=0
 let g:gruvbox_italicize_strings=0
 let g:gruvbox_italic=0
-colorscheme gruvbox
+
+colorscheme retrobox
 hi Normal guibg=NONE
 
 let g:fzf_action = {
@@ -45,43 +46,38 @@ let g:fzf_action = {
 "  Map out leader key and disable default keys
 let mapleader = ","
 nnoremap <space> <nop>
-nmap Q <nop>
-nmap ! :!
-nmap <C-n> <cmd>cn<cr>
-nmap <C-p> <cmd>cp<cr>
-nmap ]q <cmd>copen 30<CR>
-nmap [q <cmd>cclose<CR>
-nmap <leader>sr <cmd>bro old!<CR>
-vmap * y/<C-f>p<CR>
-vmap # y?<C-f>p<CR>
+nnoremap Q <nop>
+nnoremap ! :!
+nnoremap <C-n> <cmd>cn<cr>
+nnoremap <C-p> <cmd>cp<cr>
+nnoremap ]q <cmd>copen 30<CR>
+nnoremap [q <cmd>cclose<CR>
+nnoremap <leader>sr <cmd>bro old!<CR>
+vnoremap <leader>cu y:vim "<C-f>pa" src/**<C-c>
+vnoremap * y/<C-f>p<CR>
+vnoremap # y?<C-f>p<CR>
 
-nmap <esc> <cmd>nohl<CR>
-nmap <leader>t :!tmux split-window -v<CR><CR>
-nmap <leader>T :!tmux split-window -h<CR><CR>
-map <leader>w <C-w>
-nmap <C-l> <C-w>l
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <leader>e <cmd>Ex<CR>
+nnoremap <esc> <cmd>nohl<CR>
+nnoremap <leader>t :!tmux split-window -v<CR><CR>
+nnoremap <leader>T :!tmux split-window -h<CR><CR>
+nnoremap <leader>w <C-w>
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <leader>e <cmd>Ex<CR>
 
 "  Move selected up and down
-vmap J <cmd>m '>+1<CR>gv=gv
-vmap K <cmd>m '<-2<CR>gv=gv
-
-"  Center screen after moving up and down
-nmap <C-d> <C-d>zz
-nmap <C-u> <C-u>zz
+vnoremap K <cmd>m '<-2<CR>gv=gv
+vnoremap J <cmd>m '>+1<CR>gv=gv
 
 "  Center Screen after searching
-nmap n nzzzv
-nmap N Nzzzv
+"  Center screen after moving up and down
+" nnoremap <C-d> <C-d>zz
+" nnoremap <C-u> <C-u>zz
+
+" nnoremap n nzzzv
+" nnoremap N Nzzzv
   
 "  Go to other buffer
-nmap <leader>. <cmd>e #<CR>
-
-" Tabs
-
-" Fzf finder
-nmap <leader>sf <cmd>FZF<CR>
-nmap q! q:i!<Esc> 
+nnoremap <leader>. <cmd>e #<CR>

@@ -18,5 +18,4 @@ Code - OSS
 gtk-2.0/gtkfilechooser.ini
 menus/
 config_dotfiles/vim/.netrwhist
-config_dotfiles/vim/pack
 config_dotfiles/nvim/lazy-lock.json
