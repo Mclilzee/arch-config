@@ -1,6 +1,6 @@
 [core]
     pager = delta
-    editor = nvim
+    editor = vim
 [interactive]
     diffFilter = delta --color-only
 
