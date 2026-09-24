@@ -28,6 +28,10 @@ set is hls
 set splitbelow
 set ttimeoutlen=10
 set gdefault
+set grepprg=grep\ -rn\ $*\ /dev/null
+set completeopt=fuzzy,menuone,noinsert,popup
+set wildoptions=fuzzy,pum
+
 let &errorformat='e:\ file://%f:%l:%c\ %m,' . &errorformat . ',%-G%.%#'
 
 let g:gruvbox_transparent_bg=1
@@ -48,8 +52,8 @@ let mapleader = ","
 nnoremap <space> <nop>
 nnoremap Q <nop>
 nnoremap ! :!
-nnoremap <C-n> <cmd>cn<cr>
-nnoremap <C-p> <cmd>cp<cr>
+nnoremap <C-n> <cmd>w<cr><cmd>cn<cr>
+nnoremap <C-p> <cmd>w<cr><cmd>cp<cr>
 nnoremap ]q <cmd>copen 30<CR>
 nnoremap [q <cmd>cclose<CR>
 nnoremap <leader>sr <cmd>bro old!<CR>
@@ -67,10 +71,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <leader>e <cmd>Ex<CR>
 
-"  Move selected up and down
-vnoremap K <cmd>m '<-2<CR>gv=gv
-vnoremap J <cmd>m '>+1<CR>gv=gv
-
 "  Center Screen after searching
 "  Center screen after moving up and down
 " nnoremap <C-d> <C-d>zz
@@ -80,4 +80,4 @@ vnoremap J <cmd>m '>+1<CR>gv=gv
 " nnoremap N Nzzzv
   
 "  Go to other buffer
-nnoremap <leader>. <cmd>e #<CR>
+nnoremap <leader><space> <cmd>w<CR><cmd>e #<CR>
