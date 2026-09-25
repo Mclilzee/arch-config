@@ -31,6 +31,7 @@ set gdefault
 set grepprg=grep\ -rn\ $*\ /dev/null
 set completeopt=fuzzy,menuone,noinsert,popup
 set wildoptions=fuzzy,pum
+let g:netrw_liststyle=1
 
 let &errorformat='e:\ file://%f:%l:%c\ %m,' . &errorformat . ',%-G%.%#'
 
@@ -50,10 +51,11 @@ let g:fzf_action = {
 "  Map out leader key and disable default keys
 let mapleader = ","
 nnoremap <space> <nop>
+nnoremap <space> <nop>
 nnoremap Q <nop>
 nnoremap ! :!
-nnoremap <C-n> <cmd>w<cr><cmd>cn<cr>
-nnoremap <C-p> <cmd>w<cr><cmd>cp<cr>
+nnoremap <C-n> <cmd>w<cr><cmd>silent! cn<cr><cmd>cc<cr>
+nnoremap <C-p> <cmd>w<cr><cmd>silent! cp<cr><cmd>cc<cr>
 nnoremap ]q <cmd>copen 30<CR>
 nnoremap [q <cmd>cclose<CR>
 nnoremap <leader>sr <cmd>bro old!<CR>
@@ -79,5 +81,18 @@ nnoremap <leader>e <cmd>Ex<CR>
 " nnoremap n nzzzv
 " nnoremap N Nzzzv
   
-"  Go to other buffer
 nnoremap <leader><space> <cmd>w<CR><cmd>e #<CR>
+nnoremap <leader>. @:
+
+function! NetrwMapping()
+endfunction
+
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+  nmap <buffer> <space> <CR>
+  nmap <buffer> P <C-w>z
+endfunction
