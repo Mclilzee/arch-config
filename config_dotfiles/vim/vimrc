@@ -53,8 +53,8 @@ let g:fzf_action = {
 
 "  Map out leader key and disable default keys
 let mapleader = ","
-nnoremap <space> <nop>
-nnoremap <space> <nop>
+nnoremap <space> ,
+vnoremap <space> ,
 nnoremap Q <nop>
 nnoremap ! :!
 nnoremap <C-n> <cmd>w<cr><cmd>silent! cn<cr><cmd>cc<cr>
