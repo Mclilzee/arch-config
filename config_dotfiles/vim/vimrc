@@ -7,6 +7,7 @@ set path=.,**
 set undofile
 set undodir=~/.vim/undodir
 set directory=~/.vim/swap
+set hidden
 set number
 set relativenumber
 set laststatus=2
@@ -57,8 +58,8 @@ nnoremap <space> ,
 vnoremap <space> ,
 nnoremap Q <nop>
 nnoremap ! :!
-nnoremap <C-n> <cmd>w<cr><cmd>silent! cn<cr><cmd>cc<cr>
-nnoremap <C-p> <cmd>w<cr><cmd>silent! cp<cr><cmd>cc<cr>
+nnoremap <C-n> <cmd>silent! cn<cr><cmd>cc<cr>
+nnoremap <C-p> <cmd>silent! cp<cr><cmd>cc<cr>
 nnoremap ]q <cmd>copen 30<CR>
 nnoremap [q <cmd>cclose<CR>
 nnoremap <leader>sr <cmd>bro old!<CR>
@@ -75,6 +76,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <leader>e <cmd>Ex<CR>
+nnoremap <leader>c <cmd>make<CR>
 
 "  Center Screen after searching
 "  Center screen after moving up and down
