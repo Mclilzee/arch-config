@@ -35,6 +35,7 @@ set gdefault
 set grepprg=grep\ -rn\ $*\ /dev/null
 set completeopt=fuzzy,menuone,noinsert,popup
 set wildoptions=fuzzy,pum
+
 let g:netrw_liststyle=1
 
 let &errorformat='e:\ file://%f:%l:%c\ %m,' . &errorformat . ',%-G%.%#'
@@ -45,6 +46,7 @@ let g:gruvbox_italicize_strings=0
 let g:gruvbox_italic=0
 
 colorscheme retrobox
+" background color
 hi Normal guibg=NONE
 
 let g:fzf_action = {
@@ -63,7 +65,9 @@ nnoremap <C-p> <cmd>silent! cp<cr><cmd>cc<cr>
 nnoremap ]q <cmd>copen 30<CR>
 nnoremap [q <cmd>cclose<CR>
 nnoremap <leader>sr <cmd>bro old!<CR>
-vnoremap <leader>cu y:vim "<C-f>pa" src/**<C-c>
+nnoremap <leader>sp <cmd>registers<CR>
+nnoremap <leader>sm <cmd>marks<CR>
+vnoremap <leader>cu y:grep "<C-f>pa" .<C-c>
 vnoremap * y/<C-f>p<CR>
 vnoremap # y?<C-f>p<CR>
 
