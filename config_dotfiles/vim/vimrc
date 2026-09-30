@@ -3,7 +3,7 @@ set regexpengine=0
 filetype plugin indent on
 set formatoptions-=t
 set formatoptions+=croql
-set path=.,**
+set path=.,,,**
 set undofile
 set undodir=~/.vim/undodir
 set directory=~/.vim/swap
@@ -33,18 +33,14 @@ set splitbelow
 set ttimeoutlen=10
 set gdefault
 set grepprg=grep\ -rn\ $*\ /dev/null
-set completeopt=fuzzy,menuone,noinsert,popup
+set completeopt=fuzzy,menu
+set complete-=i
 set wildoptions=fuzzy,pum
+set wildignore=*/dist/*,*/target/*,*/builds/*,*/build/*,*/node_modules/*,*/bundles/*,*/gradle/*
 
 let g:netrw_liststyle=1
 
-let &errorformat='e:\ file://%f:%l:%c\ %m,' . &errorformat . ',%-G%.%#'
-
-let g:gruvbox_transparent_bg=1
-let g:gruvbox_italicize_comments=0
-let g:gruvbox_italicize_strings=0
-let g:gruvbox_italic=0
-
+" let &errorformat='e:\ file://%f:%l:%c\ %m,' . &errorformat . ',%-G%.%#'
 colorscheme retrobox
 " background color
 hi Normal guibg=NONE
@@ -67,13 +63,13 @@ nnoremap [q <cmd>cclose<CR>
 nnoremap <leader>sr <cmd>bro old!<CR>
 nnoremap <leader>sp <cmd>registers<CR>
 nnoremap <leader>sm <cmd>marks<CR>
-vnoremap <leader>cu y:grep "<C-f>pa" .<C-c>
+vnoremap <leader>sg y:grep "<C-f>pa" .<C-c>
 vnoremap * y/<C-f>p<CR>
 vnoremap # y?<C-f>p<CR>
 
 nnoremap <esc> <cmd>nohl<CR>
-nnoremap <leader>t :!tmux split-window -v<CR><CR>
-nnoremap <leader>T :!tmux split-window -h<CR><CR>
+nnoremap <leader>T :!tmux split-window -v<CR><CR>
+nnoremap <leader>t :!tmux split-window -h<CR><CR>
 nnoremap <leader>w <C-w>
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
@@ -81,20 +77,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <leader>e <cmd>Ex<CR>
 nnoremap <leader>c <cmd>make<CR>
-
-"  Center Screen after searching
-"  Center screen after moving up and down
-" nnoremap <C-d> <C-d>zz
-" nnoremap <C-u> <C-u>zz
-
-" nnoremap n nzzzv
-" nnoremap N Nzzzv
   
 nnoremap <leader><space> <cmd>w<CR><cmd>e #<CR>
 nnoremap <leader>. @:
-
-function! NetrwMapping()
-endfunction
 
 augroup netrw_mapping
   autocmd!
