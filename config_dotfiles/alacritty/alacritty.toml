@@ -8,10 +8,12 @@ background = "#0f0f0f"
 blinking = "On"
 
 [font]
-size = 18
+size = 20
 
 [font.normal]
-family = "JetBrainsMono Nerd Font Mono"
+# family = "JetBrainsMono Nerd Font Mono"
+# style = "Regular"
+family = "Iosevka Nerd Font Mono"
 
 [window]
 option_as_alt = "OnlyLeft"
