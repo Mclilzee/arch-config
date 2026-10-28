@@ -1,5 +1,6 @@
 syntax on
 set regexpengine=0
+filetype plugin on
 filetype plugin indent on
 set formatoptions-=t
 set formatoptions+=croql
@@ -70,7 +71,8 @@ vnoremap # y?<C-f>p<CR>
 nnoremap <esc> <cmd>nohl<CR>
 nnoremap <leader>T :!tmux split-window -v<CR><CR>
 nnoremap <leader>t :!tmux split-window -h<CR><CR>
-nnoremap <leader>w <C-w>
+nnoremap <leader>wl <C-w>v
+nnoremap <leader>wj <C-w>s
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
