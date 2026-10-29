@@ -3,7 +3,6 @@
     editor = vim
 [interactive]
     diffFilter = delta --color-only
-
 [delta]
     navigate = true
     light = false
@@ -11,7 +10,8 @@
     wrap-max-lines = unlimited
     line-numbers = true
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
+    tool = vimdiff
 [diff]
     colorMoved = default
 [user]
