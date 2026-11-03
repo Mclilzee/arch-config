@@ -30,3 +30,17 @@ key = ","
 mods = "Control"
 chars = "\u001b[44;5u"
 
+[[keyboard.bindings]]
+key = "l"
+mods = "Control"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "P"
+mods = "Command"
+chars = "\u001bp"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+chars = "\u001bn"
