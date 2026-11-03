@@ -2,6 +2,7 @@ syntax on
 set regexpengine=0
 filetype plugin on
 filetype plugin indent on
+set history=1000
 set formatoptions-=t
 set formatoptions+=croql
 set path=.,,,**
@@ -53,8 +54,13 @@ let g:fzf_action = {
 
 "  Map out leader key and disable default keys
 let mapleader = ","
+
+cnoremap <C-P> <UP>
+cnoremap <C-N> <DOWN>
+cnoremap <C-K> <C-F>
+cnoremap <C-L> <C-R>*
+
 nnoremap <space> ,
-vnoremap <space> ,
 nnoremap Q <nop>
 nnoremap ! :!
 nnoremap <C-n> <cmd>silent! cn<cr><cmd>cc<cr>
@@ -64,6 +70,7 @@ nnoremap [q <cmd>cclose<CR>
 nnoremap <leader>sr <cmd>bro old!<CR>
 nnoremap <leader>sp <cmd>registers<CR>
 nnoremap <leader>sm <cmd>marks<CR>
+vnoremap <space> ,
 vnoremap <leader>sg y:grep "<C-f>pa" .<C-c>
 vnoremap * y/<C-f>p<CR>
 vnoremap # y?<C-f>p<CR>
@@ -71,8 +78,8 @@ vnoremap # y?<C-f>p<CR>
 nnoremap <esc> <cmd>nohl<CR>
 nnoremap <leader>T :!tmux split-window -v<CR><CR>
 nnoremap <leader>t :!tmux split-window -h<CR><CR>
-nnoremap <leader>wl <C-w>v
-nnoremap <leader>wj <C-w>s
+nnoremap <leader>wl <C-w>v<C-w>l
+nnoremap <leader>wj <C-w>s<C-w>j
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -92,3 +99,4 @@ function! NetrwMapping()
   nmap <buffer> <space> <CR>
   nmap <buffer> P <C-w>z
 endfunction
+
