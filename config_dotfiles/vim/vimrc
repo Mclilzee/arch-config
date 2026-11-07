@@ -40,11 +40,23 @@ set complete-=i
 set wildoptions=fuzzy,pum
 set wildignore=*/dist/*,*/target/*,*/builds/*,*/build/*,*/node_modules/*,*/bundles/*,*/gradle/*
 
+if executable('rg')
+    set grepprg=rg\ --vimgrep\ --smart-case\ --hidden
+    set grepformat=%f:%l:%c:%m
+endif
+
+if executable('fd')
+    function! FdFind(cmdarg, cmdcomplete) abort
+        let l:cmd = 'fd --type f --hidden --exclude .git ' . shellescape(a:cmdarg)
+        let l:files = systemlist(l:cmd)
+        return v:shell_error ? [] : l:files
+    endfunction
+    set findfunc=FdFind
+endif
+
 let g:netrw_liststyle=1
 
-" let &errorformat='e:\ file://%f:%l:%c\ %m,' . &errorformat . ',%-G%.%#'
 colorscheme retrobox
-" background color
 hi Normal guibg=NONE
 
 let g:fzf_action = {
